@@ -47,16 +47,8 @@
     border-bottom: 2px solid var(--text);
   }
 
-  .header h1 {
-    font-size: 1.35rem;
-    font-weight: 700;
-    color: var(--text);
-  }
-
-  .header .date {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-  }
+  .header h1 { font-size: 1.35rem; font-weight: 700; }
+  .header .date { font-size: 0.8rem; color: var(--text-muted); }
 
   .section {
     background: var(--surface);
@@ -75,10 +67,7 @@
     margin-bottom: 0.85rem;
   }
 
-  .subsection {
-    margin-bottom: 1rem;
-  }
-
+  .subsection { margin-bottom: 1rem; }
   .subsection:last-child { margin-bottom: 0; }
 
   .subsection-title {
@@ -89,11 +78,7 @@
     letter-spacing: 0.03em;
   }
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.84rem;
-  }
+  table { width: 100%; border-collapse: collapse; font-size: 0.84rem; }
 
   th {
     text-align: left;
@@ -113,8 +98,6 @@
   tr:last-child td { border-bottom: none; }
 
   .name { font-weight: 600; white-space: nowrap; min-width: 50px; }
-  .task-col { line-height: 1.5; }
-  .status-col { white-space: nowrap; text-align: right; }
   .empty { color: var(--text-muted); font-style: italic; }
 
   .badge {
@@ -131,24 +114,6 @@
   .badge-new { background: var(--blue-dim); color: var(--blue); }
   .badge-empty { background: var(--gray-dim); color: var(--gray); }
 
-  .keywords {
-    display: flex;
-    gap: 0.4rem;
-    margin-top: 0.85rem;
-    padding-top: 0.65rem;
-    border-top: 1px solid var(--border);
-    flex-wrap: wrap;
-  }
-
-  .keyword {
-    font-size: 0.75rem;
-    font-weight: 500;
-    padding: 0.2rem 0.65rem;
-    background: var(--accent-dim);
-    color: var(--accent);
-    border-radius: 5px;
-  }
-
   .highlight-item {
     padding: 0.5rem 0;
     border-bottom: 1px solid var(--border);
@@ -161,8 +126,7 @@
   .highlight-item:last-child { border-bottom: none; }
 
   .highlight-dot {
-    width: 6px;
-    height: 6px;
+    width: 6px; height: 6px;
     border-radius: 50%;
     flex-shrink: 0;
     margin-top: 0.55rem;
@@ -173,17 +137,7 @@
   .dot-blue { background: var(--blue); }
   .dot-green { background: var(--green); }
 
-  .no-data {
-    color: var(--text-muted);
-    font-size: 0.84rem;
-    font-style: italic;
-  }
-
-  .divider {
-    height: 1px;
-    background: var(--border);
-    margin: 0.5rem 0;
-  }
+  .divider { height: 1px; background: var(--border); margin: 0.5rem 0; }
 
   .comment-item {
     padding: 0.45rem 0;
@@ -225,21 +179,21 @@
   <div class="subsection">
     <div class="subsection-title">마케팅</div>
     <table>
-      <tr><th>담당</th><th>핵심 업무</th><th style="text-align:right">상태</th></tr>
+      <tr><th>담당</th><th>핵심 업무</th><th>상태</th></tr>
       <tr>
         <td class="name">이진석</td>
-        <td class="task-col">인텔리전스 허브 데이터 정비, 채용 마감 자동 감지 기능</td>
-        <td class="status-col"><span class="badge badge-wip">진행중</span><span class="badge badge-done">완료</span></td>
+        <td>인텔리전스 허브 데이터 정비, 채용 마감 자동 감지 기능</td>
+        <td><span class="badge badge-wip">진행중</span> <span class="badge badge-done">완료</span></td>
       </tr>
       <tr>
         <td class="name">임수현</td>
         <td class="empty">(미작성)</td>
-        <td class="status-col"><span class="badge badge-empty">-</span></td>
+        <td><span class="badge badge-empty">-</span></td>
       </tr>
       <tr>
         <td class="name">김유진</td>
-        <td class="task-col">블로그 콘텐츠 4건 병행, 케이뱅크 고객사례 촬영</td>
-        <td class="status-col"><span class="badge badge-wip">진행중</span><span class="badge badge-wip">진행중</span></td>
+        <td>블로그 콘텐츠 4건 운영, 케이뱅크 고객사례 촬영</td>
+        <td><span class="badge badge-wip">진행중</span> <span class="badge badge-wip">진행중</span></td>
       </tr>
     </table>
   </div>
@@ -247,29 +201,23 @@
   <div class="subsection">
     <div class="subsection-title">디자인</div>
     <table>
-      <tr><th>담당</th><th>핵심 업무</th><th style="text-align:right">상태</th></tr>
+      <tr><th>담당</th><th>핵심 업무</th><th>상태</th></tr>
       <tr>
         <td class="name">정진아</td>
-        <td class="task-col">도서 내지 디자인(Copilot Chat), 고객사례 영상 그래픽</td>
-        <td class="status-col"><span class="badge badge-wip">진행중</span><span class="badge badge-wip">진행중</span></td>
+        <td>도서 내지 디자인(Copilot Chat), 고객사례 영상 그래픽</td>
+        <td><span class="badge badge-wip">진행중</span> <span class="badge badge-wip">진행중</span></td>
       </tr>
       <tr>
         <td class="name">탁수정</td>
         <td class="empty">(미작성)</td>
-        <td class="status-col"><span class="badge badge-empty">-</span></td>
+        <td><span class="badge badge-empty">-</span></td>
       </tr>
       <tr>
         <td class="name">김건</td>
-        <td class="task-col">블로그 썸네일/본문 이미지 제작, 콘텐츠 자동화 기획</td>
-        <td class="status-col"><span class="badge badge-wip">진행중</span><span class="badge badge-new">시작</span></td>
+        <td>블로그 썸네일/본문 이미지, 콘텐츠 자동화 워크플로우 기획</td>
+        <td><span class="badge badge-wip">진행중</span> <span class="badge badge-new">시작</span></td>
       </tr>
     </table>
-  </div>
-
-  <div class="keywords">
-    <span class="keyword">고객성공사례 영상</span>
-    <span class="keyword">도서 출판</span>
-    <span class="keyword">인텔리전스 허브 정비</span>
   </div>
 </div>
 
@@ -278,38 +226,47 @@
   <div class="section-label">외부 동향</div>
 
   <div class="subsection">
-    <div class="subsection-title">경영회의 (3/26)</div>
+    <div class="subsection-title">경영회의 (3/26) BX팀 관련</div>
     <div class="highlight-item">
       <div class="highlight-dot dot-red"></div>
-      <div>
-        <strong>리벨리온 MOU 1~2주 내 체결</strong> — NPU 기반 AI 오토튜너(아톰 맥스). IR 목적. BX팀 보도자료 사전 준비 필요.
-      </div>
+      <div><strong>리벨리온 MOU 1~2주 내 체결 예정</strong> — NPU 기반 AI 오토튜너(제품명: 아톰 맥스). IR 성격이 강함. BX팀 보도자료 사전 준비 필요.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-dot dot-yellow"></div>
-      <div>
-        <strong>범정부 예방점검 개정안 4월 초 발표</strong> — 업무 자동화 / AIOps / DR 센터. XM-1, 싸이옵스 판매 기회 확대.
-      </div>
+      <div><strong>범정부 정보시스템 예방점검 개정안 4월 초 발표</strong> — 업무 자동화, AIOps 도입, DR 센터가 3대 화두. XM-1, 싸이옵스 등 판매 기회 확대 예상.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-dot dot-blue"></div>
-      <div>
-        <strong>2분기 제품 중심 콘텐츠 전환</strong> — 1분기 SEO 기반 -> 2분기 제품 기술 콘텐츠로 전환.
-      </div>
+      <div><strong>2분기 제품 중심 콘텐츠 전환</strong> — 1분기 SEO 기반에서 2분기 제품 기술 콘텐츠로 전환. 뉴스레터 2호 발송, 전월 대비 오픈율/클릭률 하락.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-dot dot-green"></div>
-      <div>
-        <strong>Claude/Gemini 팀 플랜 전환 (4월~)</strong> — 개인 계정에서 팀 플랜으로. 신간도서 추가 발주 필요.
-      </div>
+      <div><strong>Claude/Gemini 4월부터 팀 플랜 전환</strong> — 개인 계정에서 팀 플랜으로 전환 예정. 신청 프로세스 사내 홍보 필요.</div>
     </div>
   </div>
 
   <div class="divider"></div>
 
   <div class="subsection" style="margin-top: 0.75rem;">
-    <div class="subsection-title">경쟁사</div>
-    <div class="no-data">이번 주 신규 경쟁사 콘텐츠 없음</div>
+    <div class="subsection-title">경쟁사 콘텐츠 (최근 7일, 29건 중 주요 3건)</div>
+    <table>
+      <tr><th>경쟁사</th><th>내용</th><th>유형</th></tr>
+      <tr>
+        <td class="name">와탭</td>
+        <td>쿠버네티스(k8s) 개념부터 도커 차이, 활용 사례까지 총정리</td>
+        <td><span class="badge badge-wip">사례/경험</span></td>
+      </tr>
+      <tr>
+        <td class="name">Datadog</td>
+        <td>책임감 있는 AI를 위한 ISO 42001 인증 획득</td>
+        <td><span class="badge badge-new">인증</span></td>
+      </tr>
+      <tr>
+        <td class="name">Grafana Labs</td>
+        <td>보안 업데이트: CVE-2026-27876, CVE-2026-27880 수정</td>
+        <td><span class="badge badge-empty">보안</span></td>
+      </tr>
+    </table>
   </div>
 
   <div class="divider"></div>
@@ -318,11 +275,11 @@
     <div class="subsection-title">고객사 / 업계</div>
     <div class="highlight-item">
       <div class="highlight-dot dot-blue"></div>
-      <div>케이뱅크 고객사례 2차 촬영 진행 (3/26~27). 영상 배포 5~6월.</div>
+      <div>케이뱅크 고객사례 2차 촬영 진행 (3/26~27). 영상 배포는 5~6월 예정.</div>
     </div>
     <div class="highlight-item">
       <div class="highlight-dot dot-yellow"></div>
-      <div>AWS Summit Seoul 5/20~21 참가 확정 (부스 B-19).</div>
+      <div>AWS Summit Seoul 5/20~21 참가 확정 (부스 B-19). 부스 콘텐츠 기획 진행중.</div>
     </div>
   </div>
 </div>
@@ -333,28 +290,19 @@
 
   <div class="comment-item">
     <div class="comment-label">이번 주 성과</div>
-    채용 마감 자동 감지 기능 추가(이진석) — 실행 즉시 6건 마감 처리 확인.
-    케이뱅크 고객사례 촬영(김유진) — 3/26~27 촬영 진행.
-  </div>
-
-  <div class="divider"></div>
-
-  <div class="comment-item">
-    <div class="comment-label">AI 활용</div>
-    이진석 — Gemini API로 경쟁사 1줄 요약 자동 생성 + Claude Code로 142건 백필 자동화.
-    김건 — ChatGPT + ComfyUI로 블로그 자동화 워크플로우 기획.
+    채용 마감 자동 감지 기능 추가 — 잡코리아/원티드 5가지 마감 판단 기준 구현, 실행 즉시 6건 마감 처리 확인. 케이뱅크 고객사례 2차 촬영(3/26~27) 진행.
   </div>
 
   <div class="divider"></div>
 
   <div class="comment-item">
     <div class="comment-label">다음 주 주목</div>
-    리벨리온 MOU 보도자료 사전 준비. 케이뱅크 촬영본 후반 작업 착수. 도서 내지 교정 마감.
+    리벨리온 MOU 보도자료 사전 준비 착수. 신한은행 고객사례 영상 편집 완료 및 4월 웹사이트 업로드 목표. 도서(Copilot Chat) 내지 교정 마감.
   </div>
 </div>
 
 <div class="footer">
-  BX 인텔리전스 | 자동 생성 | 개인별 성과는 <a href="https://www.notion.so/32e550b4fd9580449a38ec15d9976cb5">노션 원본</a>에서 확인
+  BX 인텔리전스 | 자동 생성 | 개인별 성과 상세는 <a href="https://www.notion.so/32e550b4fd9580449a38ec15d9976cb5">노션 원본</a>에서 확인
 </div>
 
 </body>
