@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>2026 상반기 Oracle SQL Tuning 기술 세미나 결과보고</title></head>
+<body style="font-family:-apple-system,sans-serif;max-width:680px;margin:0 auto;padding:24px;line-height:1.6;color:#333;font-size:14px;background:#fff">
+<h2 style="margin:0 0 4px">2026 상반기 Oracle SQL Tuning 기술 세미나</h2>
+<blockquote style="border-left:4px solid #1a73e8;padding:8px 12px;margin:4px 0 12px;background:#f8f9fa;font-size:14px">2026-03-26 (목) · 엑셈 본사 · 발표: DB기술연구2팀 김형용 차장 · 결과보고: BX팀 임수현</blockquote>
+
+<hr style="border:none;border-top:1px solid #e0e0e0;margin:12px 0">
+<strong>1. 주요 성과 요약</strong>
+<table style="border-collapse:collapse;width:100%;margin:8px 0">
+<tr><th style="border:1px solid #ddd;padding:6px 10px;background:#f5f5f5;text-align:left;font-size:13px">항목</th><th style="border:1px solid #ddd;padding:6px 10px;background:#f5f5f5;text-align:right;font-size:13px">수치</th><th style="border:1px solid #ddd;padding:6px 10px;background:#f5f5f5;text-align:left;font-size:13px">비고</th></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">사전 신청자</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right">79명</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">오픈 3일 만에 전석 마감</td></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">실제 참석자</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right"><strong>64명</strong></td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">참석률 81.0% (확정 62 + 현장 2)</td></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">만족도 응답</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right">61명</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">응답률 95.3%</td></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">평균 만족도</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right"><strong>8.64점</strong></td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">10점 만점</td></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">NPS 지수</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right"><strong>43.5</strong></td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">B2B 업계 평균 20~30 대비 높음</td></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;color:#1a73e8"><strong>후속 요청 고객</strong></td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right;color:#1a73e8"><strong>28명 (45.9%)</strong></td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">exemONE·eXemble 자료/데모 요청</td></tr>
+</table>
+
+<hr style="border:none;border-top:1px solid #e0e0e0;margin:12px 0">
+<strong>2. 응답자 프로필 (61명)</strong>
+<table style="border-collapse:collapse;width:100%;margin:8px 0">
+<tr><th style="border:1px solid #ddd;padding:6px 10px;background:#f5f5f5;text-align:left;font-size:13px">구분</th><th style="border:1px solid #ddd;padding:6px 10px;background:#f5f5f5;text-align:left;font-size:13px">분포</th></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">산업군</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">IT/소프트웨어 36.7%(22) > 금융 35.0%(21) > 공공기관 18.3%(11)</td></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">직책</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">주니어 실무자 55.7%(34) > 시니어 실무자 36.1%(22) > 관리자 8.2%(5)</td></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">SQL 튜닝 경험</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">실무 경험 41.7%(25) > 기본 개념 38.3%(23) > 처음 18.3%(11)</td></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">운영 환경</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">온프레미스 중심 65.6%(40) > 하이브리드 31.1%(19)</td></tr>
+</table>
+
+<hr style="border:none;border-top:1px solid #e0e0e0;margin:12px 0">
+<strong>3. IT 운영 과제 &amp; exemONE 연계</strong>
+<ul style="padding-left:20px;margin:4px 0">
+<li style="margin:4px 0">성능 저하 및 병목 현상 개선 — <strong>62.3%</strong>(38명)</li>
+<li style="margin:4px 0">장애 감지 및 원인 파악 — <strong>60.7%</strong>(37명)</li>
+<li style="margin:4px 0">통합 모니터링 환경 구축 — <strong>45.9%</strong>(28명)</li>
+<li style="margin:4px 0">AI·자동화 도입 — <strong>32.8%</strong>(20명)</li>
+</ul>
+<p style="margin:4px 0;padding:8px 12px;background:#e8f5e9;border-radius:4px;font-size:13px">상위 3개 과제 모두 exemONE 핵심 기능과 직접 연계</p>
+
+<p style="margin:8px 0;font-size:13px"><strong>성능 이슈 원인 파악 소요 시간:</strong> 전체의 72.1%가 30분 이상 소요<br>
+<span style="color:#666">30분~1시간 47.5%(29) > 30분 이내 27.9%(17) > 1~3시간 18.0%(11) > 3시간+ 6.6%(4)</span></p>
+<p style="margin:4px 0;padding:8px 12px;background:#fff3e0;border-radius:4px;font-size:13px">exemONE 및 AI Tuner 도입 효과 메시지로 활용 가능</p>
+
+<hr style="border:none;border-top:1px solid #e0e0e0;margin:12px 0">
+<strong>4. AI SQL 튜닝 자동화 활용 의향</strong>
+<ul style="padding-left:20px;margin:4px 0">
+<li style="margin:4px 0">참고 수준 활용 — 59.0%(36명)</li>
+<li style="margin:4px 0">적극 활용 — 39.3%(24명)</li>
+<li style="margin:4px 0">신뢰 어려움 — 1.6%(1명)</li>
+</ul>
+<p style="margin:4px 0;padding:8px 12px;background:#e8f5e9;border-radius:4px;font-size:13px">전체 98.3%가 현업 활용 의향 표시</p>
+
+<hr style="border:none;border-top:1px solid #e0e0e0;margin:12px 0">
+<strong>5. 만족도 및 세션 평가</strong>
+<table style="border-collapse:collapse;width:100%;margin:8px 0">
+<tr><th style="border:1px solid #ddd;padding:6px 10px;background:#f5f5f5;text-align:left;font-size:13px">NPS 분포</th><th style="border:1px solid #ddd;padding:6px 10px;background:#f5f5f5;text-align:right;font-size:13px">응답 수</th><th style="border:1px solid #ddd;padding:6px 10px;background:#f5f5f5;text-align:right;font-size:13px">비율</th></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">적극 추천 (9~10점)</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right"><strong>31명</strong></td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right">50.0%</td></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">만족 (7~8점)</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right">26명</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right">41.9%</td></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">개선 여지 (0~6점)</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right">4명</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right">6.5%</td></tr>
+</table>
+
+<p style="margin:8px 0;font-size:13px"><strong>인상 깊었던 세션 (복수 선택):</strong><br>
+<span style="color:#666">전체적으로 유익 68.9%(42) > Session 4 방법론 41.0%(25) > Session 3 인덱스 31.1%(19) > Session 1 튜닝 대상 26.2%(16) > Session 2 SQL Plan 21.3%(13)</span></p>
+
+<hr style="border:none;border-top:1px solid #e0e0e0;margin:12px 0">
+<strong>6. 참석자 피드백</strong><br>
+<table style="border-collapse:collapse;width:100%;margin:8px 0">
+<tr><th style="border:1px solid #ddd;padding:6px 10px;background:#e8f5e9;text-align:left;font-size:13px">긍정 반응</th><th style="border:1px solid #ddd;padding:6px 10px;background:#e8f5e9;text-align:right;font-size:13px">건수</th></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">실무 적용 가능한 실전 노하우 중심 구성</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right">18건</td></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">입문~중급까지 다양한 레벨 수용</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right">9건</td></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">실제 사례 및 튜닝 전후 비교 시연</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right">8건</td></tr>
+</table>
+<table style="border-collapse:collapse;width:100%;margin:8px 0">
+<tr><th style="border:1px solid #ddd;padding:6px 10px;background:#fff3e0;text-align:left;font-size:13px">개선 요청 및 대응 방향</th><th style="border:1px solid #ddd;padding:6px 10px;background:#fff3e0;text-align:right;font-size:13px">건수</th></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">발표 화면 가독성 부족 → 사전 신청 60명 제한, 좌석 밀도 개선</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right">4건</td></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">강의자료 사전 배포 → 세미나 요약 출력물 사전 배포 도입</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right">3건</td></tr>
+</table>
+
+<hr style="border:none;border-top:1px solid #e0e0e0;margin:12px 0">
+<strong>7. 후속 요청 현황</strong>
+<table style="border-collapse:collapse;width:100%;margin:8px 0">
+<tr><th style="border:1px solid #ddd;padding:6px 10px;background:#f5f5f5;text-align:left;font-size:13px">요청 유형</th><th style="border:1px solid #ddd;padding:6px 10px;background:#f5f5f5;text-align:right;font-size:13px">응답 수</th><th style="border:1px solid #ddd;padding:6px 10px;background:#f5f5f5;text-align:right;font-size:13px">비율</th></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">exemONE·eXemble 소개 자료 요청</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right"><strong>21명</strong></td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right">34.4%</td></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">데모 시연 요청</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right"><strong>7명</strong></td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right">11.5%</td></tr>
+<tr><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px">필요 없음</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right">33명</td><td style="border:1px solid #ddd;padding:6px 10px;font-size:13px;text-align:right">54.1%</td></tr>
+</table>
+
+<hr style="border:none;border-top:1px solid #e0e0e0;margin:12px 0">
+<strong>8. 행사 후 콘텐츠 배포</strong>
+<ul style="padding-left:20px;margin:4px 0">
+<li style="margin:4px 0">행사 당일 오후: 링크드인 성료 콘텐츠 배포</li>
+<li style="margin:4px 0">익일 오전: 기사 송출 완료 (ES본부 김태혁 차장)</li>
+<li style="margin:4px 0">익일 오후: Thanks Letter 발송 (발표자료 다운로드 링크 포함)</li>
+</ul>
+
+<hr style="border:none;border-top:1px solid #e0e0e0;margin:12px 0">
+<strong>9. 다음 세미나 예고</strong>
+<ul style="padding-left:20px;margin:4px 0">
+<li style="margin:4px 0"><strong>일시:</strong> 2026-06-25 (목)</li>
+<li style="margin:4px 0"><strong>주제:</strong> MS-SQL Server Tuning 세미나</li>
+<li style="margin:4px 0"><strong>발표자:</strong> 김성식 이사</li>
+<li style="margin:4px 0"><strong>특이사항:</strong> 도서 출판 예정 「(가제) GitHub Copilot Chat과 함께하는 SQL Server 튜닝 가이드」 연계, AI 활용 차별화 기획</li>
+<li style="margin:4px 0">홈페이지 홍보 페이지 1개월 전 오픈 예정</li>
+</ul>
+
+<hr style="border:none;border-top:1px solid #e0e0e0;margin:12px 0">
+<div style="font-size:12px;color:#999;margin-top:12px">PostgreSQL 세미나 희망 주제: 아키텍처 이해 49.2%(30) > SQL 튜닝/실행계획 32.8%(20) > PWI 성능 분석 11.5%(7) > Vacuum 최적화 6.5%(4)</div>
+<div style="font-size:12px;color:#999;margin-top:8px">BX팀 마케팅 인사이트 · 원본: 임수현 결과보고 메일 (2026-03-30)</div>
+</body>
+</html>
