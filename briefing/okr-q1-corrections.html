@@ -3,13 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>1Q OKR 점검 — 수정 사항 안내</title>
+<title>1Q OKR 점검 — 팀원 댓글 반영 안내</title>
 <style>
   :root {
-    --bg: #f7f7f8; --surface: #fff; --border: #e5e7eb;
+    --bg: #f7f7f8; --surface: #fff; --border: #e5e7eb; --border-light: #f0f0f2;
     --text: #1f2937; --muted: #6b7280; --accent: #6d5dd3;
     --red: #dc2626; --red-bg: rgba(220,38,38,.06);
     --green: #059669; --green-bg: rgba(5,150,105,.06);
+    --yellow: #b45309; --yellow-bg: rgba(180,83,9,.06);
   }
   * { margin:0; padding:0; box-sizing:border-box; }
   body { font-family:'Pretendard',-apple-system,BlinkMacSystemFont,system-ui,sans-serif; background:var(--bg); color:var(--text); line-height:1.65; padding:2rem; max-width:720px; margin:0 auto; font-size:14px; }
@@ -20,6 +21,9 @@
 
   .subtitle { font-size:.8rem; color:var(--muted); margin-bottom:1.5rem; }
 
+  .section-title { font-size:.85rem; font-weight:700; margin:1.5rem 0 .6rem; padding-bottom:.3rem; border-bottom:1px solid var(--border); }
+  .section-desc { font-size:.75rem; color:var(--muted); margin-bottom:.6rem; }
+
   .card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:1.2rem 1.4rem; margin-bottom:.75rem; }
   .card-hdr { display:flex; justify-content:space-between; align-items:center; margin-bottom:.8rem; }
   .person { font-size:.95rem; font-weight:700; }
@@ -27,12 +31,17 @@
 
   .diff { margin-bottom:.8rem; }
   .diff:last-child { margin-bottom:0; }
-  .before, .after { font-size:.82rem; padding:.5rem .7rem; border-radius:6px; margin-top:.2rem; }
+  .before, .after, .discuss { font-size:.82rem; padding:.5rem .7rem; border-radius:6px; margin-top:.2rem; }
   .before { background:var(--red-bg); color:var(--red); text-decoration:line-through; text-decoration-color:rgba(220,38,38,.35); }
   .after { background:var(--green-bg); color:var(--green); }
+  .discuss { background:var(--yellow-bg); color:var(--yellow); }
   .highlight { font-weight:600; text-decoration:none; }
 
   .reason { font-size:.75rem; color:var(--muted); margin-top:.3rem; padding-left:.7rem; border-left:2px solid var(--border); }
+
+  .badge { display:inline-block; font-size:.6rem; font-weight:600; padding:.15rem .45rem; border-radius:3px; margin-left:.5rem; vertical-align:middle; }
+  .badge-done { background:var(--green-bg); color:var(--green); }
+  .badge-discuss { background:var(--yellow-bg); color:var(--yellow); }
 
   .footer { margin-top:1.5rem; padding-top:.8rem; border-top:1px solid var(--border); font-size:.75rem; color:var(--muted); text-align:center; }
   .footer a { color:var(--accent); text-decoration:none; }
@@ -42,10 +51,14 @@
 <body>
 
 <div class="hdr">
-  <h1>1Q OKR 점검 — 수정 사항 안내</h1>
+  <h1>1Q OKR 점검 — 팀원 댓글 반영 안내</h1>
   <span class="dt">2026-04-06</span>
 </div>
-<div class="subtitle">팀원 댓글 기반으로 1Q 요약 테이블을 아래 4건 수정했어요. 원본 댓글은 노션 페이지에 그대로 남아있어요.</div>
+<div class="subtitle">팀원 댓글 13건을 분석해서 반영했어요. 수정 완료 4건, 협의 필요 9건. 원본 댓글은 노션 페이지에 그대로 남아있어요.</div>
+
+<!-- ============ 수정 완료 ============ -->
+<div class="section-title">수정 완료 <span class="badge badge-done">4건</span></div>
+<div class="section-desc">노션 1Q 요약 테이블에 이미 반영했어요.</div>
 
 <div class="card">
   <div class="card-hdr"><span class="person">정진아</span></div>
@@ -83,8 +96,82 @@
   </div>
 </div>
 
+<!-- ============ 협의 필요 ============ -->
+<div class="section-title">협의 필요 <span class="badge badge-discuss">9건</span></div>
+<div class="section-desc">다음 주간회의에서 같이 정리하면 좋겠어요.</div>
+
+<div class="card">
+  <div class="card-hdr"><span class="person">김유진</span></div>
+
+  <div class="diff">
+    <div class="cell-label">2Q 제안 · O1 KR "오픈율 15%+"</div>
+    <div class="discuss">현재 오픈율이 이미 40~60%대로 B2B IT 평균보다 높음. <span class="highlight">오픈율 대신 클릭률 15%+</span>로 지표를 바꾸는 게 나을 듯.</div>
+    <div class="reason">김유진 댓글 — 이미 높은 오픈율보다 클릭률이 더 의미 있는 성과 지표</div>
+  </div>
+
+  <div class="diff">
+    <div class="cell-label">2Q 제안 · O1 KR "뉴스레터 A/B 테스트"</div>
+    <div class="discuss">A/B 테스트 시 <span class="highlight">어떤 항목(제목? 발송 일시?)</span>을 기준으로 할지 의사결정 필요. 스티비 요금제도 고려해야 함.</div>
+    <div class="reason">김유진 댓글 — 실행 조건이 미정, 요금제 제약 확인 필요</div>
+  </div>
+
+  <div class="diff">
+    <div class="cell-label">2Q 제안 · O1 "콘텐츠 전환 기여"</div>
+    <div class="discuss"><span class="highlight">고객성공사례(케이뱅크)</span> 완성이 주요 목표인데, O1에 넣을지 별도로 둘지 분류 협의 필요.</div>
+    <div class="reason">임수현 댓글 — 이 목표에 부합하지 않을 수 있지만 주요 업무임</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-hdr"><span class="person">임수현</span></div>
+
+  <div class="diff">
+    <div class="cell-label">2Q 제안 · O2 전체</div>
+    <div class="discuss">AWS Summit 성과측정만 있고, <span class="highlight">6월 MS-SQL 세미나 + 기술서적 출판</span>이 2Q 주안점에 빠져 있음.</div>
+    <div class="reason">임수현 댓글 — 2Q 주요 행사인 6월 세미나가 OKR에 미반영</div>
+  </div>
+
+  <div class="diff">
+    <div class="cell-label">2Q 제안 · O2 KR "콘텐츠 3건"</div>
+    <div class="discuss">블로그, 링크드인 등 <span class="highlight">콘텐츠 채널 유형 구분 없이 3건</span>인지 명확화 필요.</div>
+    <div class="reason">임수현 댓글 — 산출물 범위가 불명확</div>
+  </div>
+
+  <div class="diff">
+    <div class="cell-label">2Q 제안 · O2 KR "SQL Tuning + AWS"</div>
+    <div class="discuss">SQL Tuning이 <span class="highlight">6월 세미나를 뜻하는 건지</span> 확인 필요. 6월 세미나가 2Q 주안점에 미기재.</div>
+    <div class="reason">임수현 댓글 — 용어와 범위 명확화 필요</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-hdr"><span class="person">정진아</span></div>
+
+  <div class="diff">
+    <div class="cell-label">2Q 제안 · O3 "템플릿 5종 완성"</div>
+    <div class="discuss"><span class="highlight">완성될 템플릿 5종이 구체적으로 어떤 항목인지</span> 기재 필요. 통합 브로슈어는 기획부터 전체 일정 산정 + 담당자 지정 필요.</div>
+    <div class="reason">본인 댓글 — 목표가 추상적이어서 실행 기준이 불명확</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-hdr"><span class="person">탁수정</span></div>
+
+  <div class="diff">
+    <div class="cell-label">2Q 제안 · O3 KR "비디자이너 활용 가이드 문서화"</div>
+    <div class="discuss">2Q에는 세일즈 툴킷 &rarr; 스테이셔너리 순서로 진행해야 해서, <span class="highlight">가이드 문서화는 3Q로 밀릴 수도 있음.</span> 에셋 완료 시점부터 역산 필요.</div>
+    <div class="reason">탁수정 댓글 — 선행 작업(에셋) 완료 시점에 따라 일정 조정</div>
+  </div>
+
+  <div class="diff">
+    <div class="cell-label">2Q 제안 · O3 KR "가이드 문서 1건"</div>
+    <div class="discuss">완성된 브랜드 가이드가 아니라 <span class="highlight">"v1.0 내부 기준 문서"</span> 수준이 현실적. 세일즈 툴킷에서 합의된 디자인 규칙 정리 문서 정도.</div>
+    <div class="reason">탁수정 댓글 — 목표 수준을 실행 가능한 범위로 조정 제안</div>
+  </div>
+</div>
+
 <div class="footer">
-  <a href="https://dlwlstjr.github.io/mm-reports/briefing/okr-2026-q1.html">전체 OKR 점검 리포트 보기</a>
+  <a href="https://dlwlstjr.github.io/mm-reports/briefing/okr-2026-q1.html" target="_blank">전체 OKR 점검 리포트 보기 &nearr;</a>
 </div>
 
 </body>
