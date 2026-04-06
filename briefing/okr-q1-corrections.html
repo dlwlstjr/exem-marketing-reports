@@ -3,13 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>1Q OKR 점검 — 팀원 댓글 반영 안내</title>
+<title>1Q OKR 점검 — 팀원 댓글 + 크로스체크 반영</title>
 <style>
   :root {
     --bg: #f7f7f8; --surface: #fff; --border: #e5e7eb;
     --text: #1f2937; --muted: #6b7280; --accent: #6d5dd3;
     --red: #dc2626; --red-bg: rgba(220,38,38,.06);
     --green: #059669; --green-bg: rgba(5,150,105,.06);
+    --blue: #2563eb; --blue-bg: rgba(37,99,235,.06);
   }
   * { margin:0; padding:0; box-sizing:border-box; }
   body { font-family:'Pretendard',-apple-system,BlinkMacSystemFont,system-ui,sans-serif; background:var(--bg); color:var(--text); line-height:1.65; padding:2rem; max-width:720px; margin:0 auto; font-size:14px; }
@@ -31,15 +32,17 @@
 
   .diff { margin-bottom:.8rem; }
   .diff:last-child { margin-bottom:0; }
-  .before, .after { font-size:.82rem; padding:.5rem .7rem; border-radius:6px; margin-top:.2rem; }
+  .before, .after, .note { font-size:.82rem; padding:.5rem .7rem; border-radius:6px; margin-top:.2rem; }
   .before { background:var(--red-bg); color:var(--red); text-decoration:line-through; text-decoration-color:rgba(220,38,38,.35); }
   .after { background:var(--green-bg); color:var(--green); }
+  .note { background:var(--blue-bg); color:var(--blue); }
   .highlight { font-weight:600; text-decoration:none; }
 
   .reason { font-size:.75rem; color:var(--muted); margin-top:.3rem; padding-left:.7rem; border-left:2px solid var(--border); }
 
   .badge { display:inline-block; font-size:.6rem; font-weight:600; padding:.15rem .45rem; border-radius:3px; margin-left:.5rem; vertical-align:middle; }
   .badge-done { background:var(--green-bg); color:var(--green); }
+  .badge-discuss { background:var(--blue-bg); color:var(--blue); }
 
   .footer { margin-top:1.5rem; padding-top:.8rem; border-top:1px solid var(--border); font-size:.75rem; color:var(--muted); text-align:center; }
   .footer a { color:var(--accent); text-decoration:none; }
@@ -50,12 +53,12 @@
 
 <div class="hdr">
   <h1>1Q OKR 점검 — 팀원 댓글 + 크로스체크 반영</h1>
-  <span class="dt">2026-04-06</span>
+  <span class="dt">2026-04-06 (v3)</span>
 </div>
-<div class="subtitle">팀원 댓글 13건 + 개인 회의록 크로스체크를 종합해서 노션 OKR 페이지에 반영했어요. 원본 댓글은 그대로 남아있어요.</div>
+<div class="subtitle">팀원 댓글 21건 + 개인 회의록 크로스체크를 종합. 원본 댓글은 노션에 그대로 남아있어요. 정진아님 첨부파일(2026Q1_업무현황)도 참고했어요.</div>
 
 <!-- ═══════════ 1Q 요약 테이블 수정 ═══════════ -->
-<div class="section-title">1Q 요약 테이블 수정 <span class="badge badge-done">8건</span></div>
+<div class="section-title">1Q 요약 테이블 수정 <span class="badge badge-done">10건</span></div>
 
 <div class="card">
   <div class="card-hdr"><span class="person">정진아</span></div>
@@ -63,8 +66,8 @@
   <div class="diff">
     <div class="cell-label">핵심 성과</div>
     <div class="before">도서 출판 완료, 인덴트 그래픽 툴 제작(AI), 디자인 총괄 PM + 타부서 다수 처리</div>
-    <div class="after"><span class="highlight">세미나 온오프라인 디자인 완료,</span> 도서 출판 완료, 인덴트 그래픽 툴 제작(AI), 디자인 총괄 PM + 타부서 다수 처리</div>
-    <div class="reason">본인 댓글 — Q1 세미나 온오프라인 디자인이 누락되어 있었음</div>
+    <div class="after"><span class="highlight">세미나 온오프라인 디자인 완료,</span> 도서 출판 완료, <span class="highlight">그래픽 툴 2종 제작: Xcatter(픽셀 산란 효과) + Indent Graphic Converter 1.0(인덴트 라인 변환). 패턴 제작 툴 테스트(홀드).</span> 디자인 총괄 PM + 타부서 다수 처리</div>
+    <div class="reason">본인 댓글(4/3): 세미나 디자인 누락. 본인 댓글(4/6): "인덴트 그래픽 툴"은 2개이며 정확한 명칭 수정 요청.</div>
   </div>
 
   <div class="diff">
@@ -100,14 +103,14 @@
     <div class="cell-label">핵심 성과</div>
     <div class="before">PPT 템플릿 3제품 완성, 인덴트 가이드 에셋 개발 집중, 디자인 시스템 기초 구축</div>
     <div class="after"><span class="highlight">디자인 시스템 기반 구축(그리드·서체·레이아웃), 인덴트 가이드 에셋 개발, 사전준비사항 표지 3종 완료, 스테이셔너리(명함·쇼핑백·봉투) 디자인·발주</span></div>
-    <div class="reason">개인 회의록 확인 — "3제품 완성"은 부정확. 1Q에는 그래픽 에셋·레이아웃 기반 구축에 집중. PPT 템플릿 제품별 적용(MaxGauge/InterMax/exemONE)은 4월에야 시작, 아직 미완료. 스테이셔너리 성과는 누락되어 있었음.</div>
+    <div class="reason">개인 회의록 확인 — "3제품 완성"은 부정확. 1Q에는 에셋·레이아웃 기반 구축에 집중. PPT 템플릿 제품별 적용(MaxGauge/InterMax/exemONE)은 4월에야 시작. 스테이셔너리 성과 누락.</div>
   </div>
 
   <div class="diff">
     <div class="cell-label">아쉬운 부분</div>
     <div class="before">온라인 채널 시각 기준(유튜브 등) 미착수, 솔루션맵 리뉴얼 미착수</div>
-    <div class="after">온라인 채널 시각 기준(유튜브 등) 미착수. <span class="highlight">솔루션맵은 은빈님 담당이었고 탁수정님 관여 없음</span> — 삭제</div>
-    <div class="reason">팀장 확인 — 솔루션맵은 은빈님(현 TF팀)이 완성·배포. 탁수정님 업무 아님</div>
+    <div class="after">온라인 채널 시각 기준 — <span class="highlight">2월 우선순위 조정(브랜드 에셋 개발 우선)으로 후순위. 유튜브 썸네일은 김건 담당.</span> 솔루션맵은 <span class="highlight">은빈님 담당이었고 탁수정님 관여 없음</span> — 삭제</div>
+    <div class="reason">정진아 댓글(4/6): 2월 그룹장 협의로 업무 우선순위 변경. 팀장 확인: 솔루션맵은 은빈님(현 TF팀)이 완성·배포.</div>
   </div>
 </div>
 
@@ -137,6 +140,31 @@
     <div class="before">커피챗 미실행</div>
     <div class="after"><span class="highlight">IT 운영 담당자 대상</span> 커피챗 미실행 (사내 유관부서 커피챗·고객사 인터뷰는 별도 진행)</div>
     <div class="reason">개인 회의록 확인 — IR/PR팀 커피챗, 신한은행 인터뷰는 진행했으나 OKR KR의 "IT 운영 담당자" 대상은 미실행</div>
+  </div>
+</div>
+
+<!-- ═══════════ 1Q 팀 진단 수정 ═══════════ -->
+<div class="section-title">1Q 팀 진단 수정 <span class="badge badge-done">2건</span></div>
+
+<div class="card">
+  <div class="card-hdr"><span class="person">패턴 3 "스팟 업무가 OKR 잠식" 원인 예시</span></div>
+
+  <div class="diff">
+    <div class="cell-label">원인 예시</div>
+    <div class="before">정진아님: 타부서 지원(송년회, SNU 동문회, 한전 PPT 등)이 OKR 집중을 분산</div>
+    <div class="after">정진아님: 타부서 지원(<span class="highlight">한전 PPT 등 26년 1Q 건</span>)이 OKR 집중을 분산. <span class="highlight">송년회·SNU 동문회는 25년 Q4 업무로 삭제.</span></div>
+    <div class="reason">정진아 댓글(4/6) — 송년회, SNU 동문회는 25년 Q4 업무. 26년 1Q 분산 원인으로 기재 부적절.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-hdr"><span class="person">정진아 역할 정정</span></div>
+
+  <div class="diff">
+    <div class="cell-label">OKR 전반의 "디자인PM" 표기</div>
+    <div class="before">정진아 = 브랜드디자인 총괄 PM</div>
+    <div class="after"><span class="highlight">업무 분배 이후 각 디자이너가 개별 프로젝트 PM으로 전환.</span> 브랜드 에셋은 탁수정이 PM 수행 중. 정진아는 도서 출판 등 개별 프로젝트 PM.</div>
+    <div class="reason">정진아 댓글(4/6) — 기존 총괄 PM → 개별 PM 체제로 변경된 현실 반영</div>
   </div>
 </div>
 
@@ -201,7 +229,7 @@
     <div class="cell-label">2Q 주안점</div>
     <div class="before">템플릿 5종 완성, 통합 브로슈어 확정</div>
     <div class="after">본인이 직접 제시한 2Q 목표로 교체:<br><span class="highlight">1) 내부 세미나 디자인 템플릿 구축<br>2) SQL Server 도서 출판 완료<br>3) 고객성공사례 영상 가이드 구축</span></div>
-    <div class="reason">본인 댓글: "템플릿 5종"은 탁수정 담당, 정진아는 PM. 본인 목표가 실행력 높음.</div>
+    <div class="reason">본인 댓글: "템플릿 5종"은 탁수정 담당, 정진아는 개별 프로젝트 PM. 본인 목표가 실행력 높음.</div>
   </div>
 </div>
 
@@ -230,7 +258,46 @@
     <div class="cell-label">O3 KR "솔루션맵 리뉴얼"</div>
     <div class="before">솔루션맵 리뉴얼 업데이트 필요 시 — 채은빈 &rarr; 미정(리드), 김건(서포트)</div>
     <div class="after"><span class="highlight">삭제.</span> 은빈님은 현재 TF팀 소속. 솔루션맵은 이미 완성·배포 완료.</div>
-    <div class="reason">팀장 확인: 은빈님 퇴사가 아니라 타팀 TF. 솔루션맵은 완성 상태이므로 2Q KR에서 제거.</div>
+    <div class="reason">팀장 확인: 은빈님은 타팀 TF 중. 솔루션맵은 완성 상태이므로 2Q KR에서 제거.</div>
+  </div>
+</div>
+
+<!-- ═══════════ 2Q 구조 논의 ═══════════ -->
+<div class="section-title">2Q OKR 구조 논의 <span class="badge badge-discuss">주간회의 안건</span></div>
+<div class="section-desc">정진아님이 제기한 구조적 이슈. 2Q OKR 확정 전에 팀 차원에서 결정이 필요해요.</div>
+
+<div class="card">
+  <div class="card-hdr"><span class="person">타부서 지원을 OKR에 포함할 것인가?</span></div>
+
+  <div class="diff">
+    <div class="cell-label">현재 제안</div>
+    <div class="note">70% OKR + 30% 스팟 버퍼. 타부서 요청은 OKR 밖의 '운영 업무'로 분리.</div>
+  </div>
+
+  <div class="diff">
+    <div class="cell-label">정진아 의견</div>
+    <div class="note">BX팀이 사내에서 담당하는 역할상, <span class="highlight">타부서 지원 자체를 팀 OKR 중 하나로 잡는 방식</span>도 검토 필요. 디자이너가 일정·우선순위를 조율할 수 있는 경우가 매우 드물고, 타부서 니즈에 맞춰 진행됨.</div>
+    <div class="reason">정진아 댓글 3건(4/6) — 타부서 대응이 BX팀 본업 중 하나인데 OKR에서 빠지면 성과로 인정받지 못하는 구조적 문제</div>
+  </div>
+
+  <div class="diff">
+    <div class="cell-label">팀장 판단 필요</div>
+    <div class="note"><span class="highlight">A안:</span> 현행 유지 (70/30 버퍼). 타부서 지원은 주간 성과에서 별도 트래킹.<br><span class="highlight">B안:</span> 팀 O4 신설 "타부서 디자인 요청 대응 시간 단축" — KR: 요청→완료 평균 리드타임 측정, 요청 양식 정착률 등.<br><span class="highlight">C안:</span> O3에 통합. "디자인 자산 정리 + 타부서 셀프서비스 가능하게" — 가이드 문서가 곧 타부서 지원 감소로 연결.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-hdr"><span class="person">템플릿 5종 카테고리 지정</span></div>
+
+  <div class="diff">
+    <div class="cell-label">현재</div>
+    <div class="note">"템플릿 5종"이라고만 되어 있고 구체 항목 없음</div>
+  </div>
+
+  <div class="diff">
+    <div class="cell-label">정진아 의견</div>
+    <div class="note"><span class="highlight">어떤 카테고리인지 지정 필요</span> (예: 제안서, 제품소개서, 사전준비사항, 회사소개서, 세미나자료 등)</div>
+    <div class="reason">정진아 댓글(4/6) — 목표가 추상적이면 달성 여부 판단 불가</div>
   </div>
 </div>
 
