@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BX팀 주간 브리핑 — 4월 4주</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+  :root {
+    --bg: #f7f7f8;
+    --surface: #fff;
+    --border: #e5e7eb;
+    --border-light: #f0f0f2;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --accent: #6d5dd3;
+    --green: #059669; --green-bg: rgba(5,150,105,.06);
+    --yellow: #b45309; --yellow-bg: rgba(180,83,9,.06);
+    --blue: #2563eb; --blue-bg: rgba(37,99,235,.06);
+    --red: #dc2626;
+    --gray: #9ca3af; --gray-bg: rgba(156,163,175,.06);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Pretendard',-apple-system,BlinkMacSystemFont,system-ui,sans-serif; background:var(--bg); color:var(--text); line-height:1.55; padding:2rem; max-width:820px; margin:0 auto; font-size:14px; }
+
+  .hdr { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:1.5rem; padding-bottom:.6rem; border-bottom:2px solid var(--text); }
+  .hdr h1 { font-size:1.25rem; font-weight:700; }
+  .hdr .dt { font-size:.78rem; color:var(--muted); }
+
+  .notice { background:rgba(109,93,211,.06); border:1px solid rgba(109,93,211,.2); border-radius:8px; padding:.7rem 1rem; margin-bottom:1rem; font-size:.78rem; color:var(--text); line-height:1.6; }
+  .notice strong { color:var(--accent); }
+
+  .card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:1.2rem 1.4rem; margin-bottom:.75rem; }
+  .lbl { font-size:.6rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--accent); margin-bottom:.7rem; }
+  .sub { font-size:.7rem; font-weight:700; color:var(--muted); margin-bottom:.5rem; letter-spacing:.03em; }
+
+  .person { display:flex; gap:.75rem; padding:.6rem 0; border-bottom:1px solid var(--border-light); }
+  .person:last-child { border-bottom:none; }
+  .person-name { font-weight:600; font-size:.82rem; min-width:70px; padding-top:.15rem; color:var(--text); display:flex; flex-direction:column; gap:.2rem; }
+  .person-tasks { flex:1; display:flex; flex-direction:column; gap:.3rem; }
+  .task-row { display:flex; justify-content:space-between; align-items:center; gap:.5rem; }
+  .task-text { font-size:.82rem; color:var(--text); flex:1; }
+  .b { display:inline-block; font-size:.6rem; font-weight:600; padding:.15rem .45rem; border-radius:3px; white-space:nowrap; }
+  .b-done { background:var(--green-bg); color:var(--green); }
+  .b-wip { background:var(--yellow-bg); color:var(--yellow); }
+  .b-new { background:var(--blue-bg); color:var(--blue); }
+  .b-carry { background:rgba(156,163,175,.1); color:#6b7280; border:1px dashed #bdc3c9; font-size:.55rem; padding:.1rem .35rem; }
+
+  .team-sep { height:1px; background:var(--border); margin:.6rem 0 .5rem; }
+
+  table { width:100%; border-collapse:collapse; font-size:.82rem; }
+  th { text-align:left; padding:.35rem .5rem; font-size:.65rem; font-weight:600; color:var(--muted); border-bottom:1px solid var(--border); }
+  td { padding:.45rem .5rem; border-bottom:1px solid var(--border-light); vertical-align:top; }
+  tr:last-child td { border-bottom:none; }
+  td.nm { font-weight:600; white-space:nowrap; width:90px; }
+  td.type { white-space:nowrap; color:var(--muted); font-size:.75rem; }
+
+  .hi { padding:.4rem 0; border-bottom:1px solid var(--border-light); font-size:.82rem; display:flex; gap:.4rem; align-items:flex-start; }
+  .hi:last-child { border-bottom:none; }
+  .dot { width:5px; height:5px; border-radius:50%; flex-shrink:0; margin-top:.5rem; }
+  .d-r { background:var(--red); } .d-y { background:var(--yellow); } .d-b { background:var(--blue); } .d-g { background:var(--green); }
+
+  .sep { height:1px; background:var(--border); margin:.5rem 0; }
+  .mb { margin-bottom:.85rem; }
+
+  .ci { padding:.4rem 0; font-size:.82rem; line-height:1.65; }
+  .cl { font-weight:700; color:var(--accent); font-size:.65rem; letter-spacing:.02em; margin-bottom:.35rem; }
+
+  .ft { text-align:center; padding:1rem 0 .3rem; font-size:.65rem; color:var(--muted); }
+  strong { font-weight:600; }
+  a { color:var(--blue); text-decoration:none; } a:hover { text-decoration:underline; }
+
+  .advice { font-size:.78rem; color:var(--accent); padding:.4rem .7rem; background:rgba(109,93,211,.06); border-left:2px solid var(--accent); border-radius:0 4px 4px 0; margin-top:.3rem; line-height:1.65; }
+  .tier { font-size:.6rem; font-weight:600; padding:.1rem .4rem; border-radius:3px; background:var(--gray-bg); color:var(--muted); margin-right:.3rem; }
+  .tier-1 { background:rgba(37,99,235,.08); color:var(--blue); }
+  .tier-2 { background:rgba(5,150,105,.08); color:var(--green); }
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <h1>BX팀 주간 브리핑</h1>
+  <span class="dt">4월 4주 (2026.04.20 월 기준)</span>
+</div>
+
+<div class="notice">
+  <strong>안내</strong> — 금주는 BX팀 워크스페이스 구성원 재초대 기간입니다.
+  일부 구성원의 업무 성과는 직전(3주차) 작성분을 이월해 표시하며, 해당 항목은 <span class="b b-carry">3주차 이월</span> 배지로 구분합니다.
+  4월 5주차부터는 전체 구성원 최신 내용으로 복귀 예정입니다.
+</div>
+
+<!-- 1. 주간 요약 -->
+<div class="card">
+  <div class="lbl">주간 요약</div>
+
+  <div class="sub">마케팅</div>
+
+  <div class="person">
+    <div class="person-name">이진석 <span class="b b-carry">3주차 이월</span></div>
+    <div class="person-tasks">
+      <div class="task-row">
+        <span class="task-text">인텔리전스 파이프라인 데이터 품질 개선 (크롤러 4종 + DB 245건 아카이브)</span>
+        <span class="b b-done">완료</span>
+      </div>
+      <div class="task-row">
+        <span class="task-text">CEO용 위클리 인텔리전스 리포트 설계 v4 + 프로젝트 대시보드 v2 + 1Q OKR 점검</span>
+        <span class="b b-done">완료</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="person">
+    <div class="person-name">임수현 <span class="b b-carry">3주차 이월</span></div>
+    <div class="person-tasks">
+      <div class="task-row">
+        <span class="task-text">AWS Summit Seoul 2026 부스 운영 기획안 — 4개 탭 웹 기획안 1차 완성 (Vercel 배포)</span>
+        <span class="b b-wip">진행중</span>
+      </div>
+      <div class="task-row">
+        <span class="task-text">AIOps 체험형 게임 「Alert or Not」 콘텐츠 기획 + 이벤트 운영 플로우·경품 구성안</span>
+        <span class="b b-wip">진행중</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="person">
+    <div class="person-name">김유진</div>
+    <div class="person-tasks">
+      <div class="task-row">
+        <span class="task-text">4월호 뉴스레터 기획 — 내부 피드백 반영 후 금주 발송 예정</span>
+        <span class="b b-wip">진행중</span>
+      </div>
+      <div class="task-row">
+        <span class="task-text">케이뱅크 고객사 촬영(4/16) + 행사 트렌드 웨비나 요약 정리</span>
+        <span class="b b-done">완료</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="team-sep"></div>
+  <div class="sub">디자인</div>
+
+  <div class="person">
+    <div class="person-name">정진아</div>
+    <div class="person-tasks">
+      <div class="task-row">
+        <span class="task-text">신규 도서 출판 『SQL Server Github Copilot Chat』 — 지난주·금주 연속 진행</span>
+        <span class="b b-wip">진행중</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="person">
+    <div class="person-name">탁수정 <span class="b b-carry">3주차 이월</span></div>
+    <div class="person-tasks">
+      <div class="task-row">
+        <span class="task-text">세일즈 툴킷 사전 준비사항 — 인터맥스·맥스게이지 7종 구성도 스타일 조정 + PPT 표지·내지 작업</span>
+        <span class="b b-done">완료</span>
+      </div>
+      <div class="task-row">
+        <span class="task-text">인터맥스(오우경 부장님 공유 후 수정 반영 최종 완료) / 맥스게이지 3종 피드백 대기</span>
+        <span class="b b-wip">진행중</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="person">
+    <div class="person-name">김건 <span class="b b-carry">3주차 이월</span></div>
+    <div class="person-tasks">
+      <div class="task-row">
+        <span class="task-text">Exem 블로그 콘텐츠 자동화 워크플로우 Ver.1 구축 — Weavy AI + Claude Code Playwright 연동</span>
+        <span class="b b-wip">진행중</span>
+      </div>
+      <div class="task-row">
+        <span class="task-text">유튜브 고객성공사례 영상 썸네일 제작 서포트 (레퍼런스 조사 기반)</span>
+        <span class="b b-done">완료</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 2. 팀 노트 (2번째로 이동) -->
+<div class="card">
+  <div class="lbl">팀 노트</div>
+
+  <div class="ci">
+    <div class="cl">이번 주는</div>
+    금주는 팀원 재초대 기간이라 4주차 실제 기록은 김유진·정진아 2인뿐입니다.
+    김유진은 4월호 뉴스레터 발송 준비와 케이뱅크 고객사 촬영을, 정진아는 SQL Server Github Copilot Chat 도서 작업을 3주차에 이어 그대로 이어가고 있습니다.
+    나머지 4명(이진석·임수현·탁수정·김건)은 직전 주차 진행분이 그대로 이월 — AWS Summit 부스 기획(임수현), 인텔리전스 파이프라인 정비(이진석), 세일즈 툴킷 PPT 표준화(탁수정), 블로그 자동화 Ver.1(김건) 이 주 축입니다.
+  </div>
+  <div class="sep"></div>
+  <div class="ci">
+    <div class="cl">다음 주는</div>
+    <strong>1) AWS Summit Seoul 2026 부스 제출물 마감 (4/22 수)</strong><br>
+    임수현이 AWS 제출용 부스 운영 기획안을 마무리하고, 이진석이 데모 방향(RCA·AIOps 챗봇)을 부스 콘텐츠에 어떻게 녹일지 최종 조율합니다. 경쟁사 부스 구성 조사도 이 시점에 완료.<br><br>
+
+    <strong>2) 4월호 뉴스레터 발송 + 5월 백서 주제 선정</strong><br>
+    김유진이 내부 피드백 반영 후 금주 내 뉴스레터 발송, 뒤이어 5월 백서 주제·설득 자료 재기획 착수.<br><br>
+
+    <strong>3) 도서 출판·세일즈 툴킷 마무리</strong><br>
+    정진아는 SQL Server Github Copilot Chat 내지 작업 연속 진행, 탁수정은 맥스게이지 3종 피드백 반영 마감.<br><br>
+
+    <strong>4) 블로그 콘텐츠 자동화 Ver.1 마이너 수정 + Ver.2 확장</strong><br>
+    김건이 이미지 제작 자동화 마이너 이슈 정리 후 이미지 기획-제작까지 자동화 범위 확장.
+  </div>
+</div>
+
+<!-- 3. 주간 동향 브리핑 -->
+<div class="card">
+  <div class="lbl">주간 동향 브리핑</div>
+
+  <div class="mb" style="margin-top:.2rem;">
+    <div class="sub">주요 경쟁사 콘텐츠 (4/13~4/19)</div>
+    <table>
+      <tr><th>경쟁사</th><th>콘텐츠</th><th>유형</th></tr>
+      <tr>
+        <td class="nm">제니퍼소프트</td>
+        <td><a href="https://jennifersoft.com/ko/blog/tech/2026-03-25-jennifer-ai/" target="_blank">AI 에이전트 시대, APM은 어디로 가야 할까?</a></td>
+        <td class="type">전략</td>
+      </tr>
+      <tr>
+        <td class="nm">제니퍼소프트</td>
+        <td><a href="https://jennifersoft.com/ko/blog/tech/2026-12-17-jennifer-msa-monitoring/" target="_blank">제니퍼 마이크로서비스(MSA) 모니터링 신기능</a></td>
+        <td class="type">신기능</td>
+      </tr>
+      <tr>
+        <td class="nm">브레인즈컴퍼니</td>
+        <td><a href="https://www.brainz.co.kr/recent-story/view/id/453" target="_blank">행안부 표준운영절차 대응을 위한 ITSM 시스템 구축 시 고려사항 5가지</a></td>
+        <td class="type">공공 전략</td>
+      </tr>
+      <tr>
+        <td class="nm">Honeycomb.io</td>
+        <td><a href="https://www.honeycomb.io/blog/ai-working-for-you-mcp-canvas-agentic-workflows" target="_blank">AI Working for You: MCP, Canvas, and Agentic Workflows</a></td>
+        <td class="type">해외 트렌드</td>
+      </tr>
+    </table>
+    <div class="advice" style="margin-top:.5rem">
+      제니퍼소프트가 "AI 에이전트 시대에 APM은 어디로 가야 할까"를 자사 블로그에서 공개적으로 꺼낸 건 눈여겨볼 지점.
+      경쟁사가 AI 에이전트 맥락에서 자사 포지셔닝을 재정의하려는 움직임인데, 우리 exemONE 블로그·AWS Summit 부스 메시지에서도 같은 질문에 우리가 어떻게 답할지 정리가 필요.
+      브레인즈컴퍼니의 행안부 ITSM 글은 공공 고객 어프로치용 참고 자료로 유용 — 김유진이 5월 백서 주제 후보로 검토해도 좋을 듯.
+    </div>
+  </div>
+
+  <div class="sep"></div>
+
+  <div class="mb" style="margin-top:.6rem;">
+    <div class="sub">고객사 동향 (4/13~4/19)</div>
+    <div class="hi">
+      <div class="dot d-b"></div>
+      <div>
+        <span class="tier tier-1">티어1</span><strong>SK하이닉스, HBM 수요 낸드까지 번졌다 — 증권가 실적 랠리 전망</strong> (4/19)<br>
+        HBM 수급 확장이 낸드 메모리까지 영향. 반도체 실적 상승 사이클 진입 시점.
+      </div>
+    </div>
+    <div class="hi">
+      <div class="dot d-b"></div>
+      <div>
+        <span class="tier tier-1">티어1</span><strong>한국전력공사, 전력산업 산·학·연·관 전문포럼 출범</strong> (4/19)<br>
+        에너지 신사업 모델 발굴 협의체 가동. 에너지·인프라 IT 플랫폼 영역에서 협업 접점 늘어날 시기.
+      </div>
+    </div>
+    <div class="hi">
+      <div class="dot d-y"></div>
+      <div>
+        <span class="tier tier-2">티어2</span><strong>서울시, 600억 출자해 9,350억 피지컬AI 펀드 조성</strong> (4/19)<br>
+        로봇·자율주행 등 피지컬AI 분야 100억 펀드 첫 신설. 공공 AI 조달 시장 확대.
+      </div>
+    </div>
+    <div class="advice" style="margin-top:.5rem">
+      반도체(SK하이닉스)·에너지(한전)·공공 AI(서울시) 세 축이 같은 주에 움직였습니다.
+      5월 AWS Summit까지 3주 남은 지금 시점에, 부스 콘텐츠 레퍼런스 노출 순서를 반도체·에너지 건을 앞단으로 조정해볼 만합니다.
+      특히 SK하이닉스 뉴스는 exemONE이 이미 보유한 반도체 고객 레퍼런스 강조 포인트로 쓸 수 있어요.
+    </div>
+  </div>
+
+  <div class="sep"></div>
+
+  <div class="mb" style="margin-top:.6rem;">
+    <div class="sub">예정 행사 (향후 2주)</div>
+    <table>
+      <tr><th>행사명</th><th>일시</th><th>장소/유형</th></tr>
+      <tr>
+        <td><a href="https://www.enhans.ai/" target="_blank">Enhans — 실행하는 인공지능, AI OS는 어떻게 만들어지는가</a></td>
+        <td class="type">4/23(목)</td>
+        <td class="type">온라인 · 웨비나</td>
+      </tr>
+      <tr>
+        <td>정보보호가 일상이 되는 순간 — '온앤安' 세미나</td>
+        <td class="type">4/23(목)</td>
+        <td class="type">판교 · 세미나</td>
+      </tr>
+      <tr>
+        <td>[국가데이터처] 2026년 제1회 통계 아카데미</td>
+        <td class="type">4/28(화)</td>
+        <td class="type">대전 · 세미나</td>
+      </tr>
+    </table>
+    <div class="advice" style="margin-top:.5rem">
+      Enhans AI OS 웨비나(4/23)는 에이전틱 AI 구조 최신 흐름 파악용. 이진석이 30분 등록해두고 팀 MM 채널에 3줄 요약 공유하면 팀 전체가 빠르게 따라올 수 있습니다.
+      판교 온앤安 정보보호 세미나는 임수현이 AWS 부스 아이디어 겸 현장 방문해 레퍼런스 수집할 기회.
+    </div>
+  </div>
+
+  <div class="sep"></div>
+
+  <div class="mb" style="margin-top:.6rem;">
+    <div class="sub">경쟁사 채용 동향 (최근 2주)</div>
+    <table>
+      <tr><th>회사</th><th>포지션</th><th>직군</th><th>게시일</th></tr>
+      <tr>
+        <td class="nm">Elastic</td>
+        <td><a href="https://jobs.elastic.co/jobs?gh_jid=7712961" target="_blank">Senior Support Engineer — <strong>Korean Speaking</strong></a></td>
+        <td class="type">한국 지원</td>
+        <td class="type">4/10(목)</td>
+      </tr>
+    </table>
+    <div class="advice" style="margin-top:.5rem">
+      Elastic이 공고명에 "Korean Speaking"을 명시한 한국어 지원 엔지니어 채용을 올린 건 의미가 있습니다 — 경쟁사 중 유일한 한국 지원 강화 신호.
+      New Relic·Datadog 건도 같은 기간 올라왔지만 글로벌 채용 페이지(greenhouse·careers.datadoghq)에 위치 명시가 없어 한국 관련인지 확인이 어려워 본 브리핑에서는 제외.
+    </div>
+  </div>
+
+  <div class="sep"></div>
+
+  <div class="mb" style="margin-top:.6rem;">
+    <div class="sub">디자인 메모</div>
+    <div class="hi">
+      <div class="dot d-g"></div>
+      <div>
+        <strong>디자이너를 위한 ProtoPie AI 프로토타입 실전 가이드</strong> (4/23 목, 서초)<br>
+        <span style="color:var(--muted); font-size:.78rem;">AI 프로토타이핑 실무 워크숍. 정진아·김건이 관심 있다면 참가 검토.</span>
+      </div>
+    </div>
+    <div class="hi">
+      <div class="dot d-g"></div>
+      <div>
+        <strong><a href="https://www.brainz.co.kr/recent-story/view/id/450" target="_blank">브레인즈컴퍼니, 27회 공공솔루션마켓 참가 후기</a></strong><br>
+        <span style="color:var(--muted); font-size:.78rem;">경쟁사 공공 행사 부스 구성·메시지 실사례. AWS Summit 부스 기획 중인 탁수정·임수현의 레퍼런스로 참고.</span>
+      </div>
+    </div>
+    <div class="hi">
+      <div class="dot d-g"></div>
+      <div>
+        <strong>팀 내 사례 — Weavy AI + Claude Code Playwright 자동화</strong><br>
+        <span style="color:var(--muted); font-size:.78rem;">김건이 블로그 썸네일 제작 자동화에 적용한 워크플로. 단순 이미지 생성 넘어 실제 디자인 플로우 자동화까지 이어진 케이스 — 다른 팀원이 참고할 만한 내부 레퍼런스.</span>
+      </div>
+    </div>
+    <div class="advice" style="margin-top:.5rem">
+      디자이너 인풋이 필요한 행사·레퍼런스를 별도로 묶어 봤어요. 전용 "디자인 영감" DB가 아직 없어 이번 주는 3건 소박하게 시작. 소스 재정비 과정에서 해당 카테고리도 쌓아가면 매주 보강 가능.
+    </div>
+  </div>
+
+  <div class="sep"></div>
+
+  <div style="margin-top:.6rem;">
+    <div class="sub">자사 블로그 성과 · 경쟁사 SEO 동향</div>
+    <div style="font-size:.78rem; color:var(--muted); padding:.3rem 0; line-height:1.6;">
+      GA4·Ahrefs 기반 주간 성과 데이터는 <a href="https://www.notion.so/325550b4fd958083bc5fdc52244465a6">BX 인텔리전스 허브</a>의 해당 DB에서 최신 상태로 유지됩니다.
+      팀 구성원 재초대 완료 시점(5주차)부터 본 섹션에 다시 포함 예정.
+    </div>
+  </div>
+</div>
+
+<div class="ft">
+  BX 인텔리전스 | 4월 4주차 이월 브리핑 | <a href="https://www.notion.so/343550b4fd9580c0988cf13ef0e563ea">노션 원본</a>
+</div>
+
+</body>
+</html>
