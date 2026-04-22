@@ -2,807 +2,741 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>월간 성과 리포트 · 2026년 4월</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BX팀 월간 성과 리포트 · 2026년 4월</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:'Pretendard Variable','Pretendard',system-ui,sans-serif;background:#f7f8fa;color:#1a1d29;line-height:1.6}
-.wrap{max-width:1000px;margin:0 auto;padding:48px 24px 80px}
-.header{margin-bottom:28px}
-.badge{display:inline-block;background:#1f4ed8;color:#fff;font-size:11px;font-weight:600;padding:4px 10px;border-radius:4px;letter-spacing:.5px}
-h1{font-size:30px;font-weight:800;margin:12px 0 6px;letter-spacing:-.8px}
-.period{color:#6b7280;font-size:14px;margin-bottom:16px}
-.period .prev{color:#9ca3af;font-size:12.5px;margin-left:6px}
-.summary-line{background:#eff6ff;border:1px solid #dbeafe;color:#1e40af;padding:14px 18px;border-radius:10px;font-size:14.5px;font-weight:500;line-height:1.5}
-.kpi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:28px 0 40px}
-.kpi-card{background:#fff;padding:18px;border-radius:12px;box-shadow:0 1px 3px rgba(0,0,0,.04);border:1px solid #eef0f4}
-.kpi-label{font-size:12px;color:#6b7280;margin-bottom:6px;font-weight:500}
-.kpi-value{font-family:'Inter','Pretendard Variable',sans-serif;font-size:26px;font-weight:700;letter-spacing:-.5px;color:#111827}
-.kpi-trend{font-size:11.5px;margin-top:4px;font-weight:500}
-.kpi-trend.up{color:#059669}.kpi-trend.down{color:#dc2626}.kpi-trend.flat{color:#6b7280}
-section{margin-bottom:36px}
-section h2{font-size:18px;font-weight:700;margin:0 0 4px;letter-spacing:-.3px}
-.section-lead{color:#6b7280;font-size:13.5px;margin:0 0 14px}
-.card{background:#fff;border-radius:12px;padding:22px;box-shadow:0 1px 3px rgba(0,0,0,.04);border:1px solid #eef0f4}
-.card + .card{margin-top:12px}
-.sub-title{font-size:13px;font-weight:600;color:#374151;margin:4px 0 10px;display:flex;align-items:center;gap:8px}
-.sub-title::before{content:'';width:3px;height:14px;background:#1f4ed8;border-radius:2px}
-table{width:100%;border-collapse:collapse;font-size:13.5px}
-th,td{padding:10px 12px;text-align:left;border-bottom:1px solid #f1f3f6;vertical-align:middle}
-th{font-weight:600;color:#6b7280;font-size:11px;text-transform:uppercase;letter-spacing:.5px}
-tbody tr:last-child td{border-bottom:none}
-.num{text-align:right;font-family:'Inter',sans-serif;color:#111827}
-.muted{color:#9ca3af;font-size:11.5px}
-td a{color:#1f4ed8;text-decoration:none}
-td a:hover{text-decoration:underline}
-.up{color:#059669}.down{color:#dc2626}
-.empty{text-align:center;color:#9ca3af;padding:20px}
-.bar-track{width:140px;height:6px;background:#f3f4f6;border-radius:3px;overflow:hidden}
-.bar-fill{height:100%;background:linear-gradient(90deg,#1f4ed8,#3b82f6);border-radius:3px}
-.mini-bar{width:180px;height:6px;background:#f3f4f6;border-radius:3px;overflow:hidden}
-.mini-bar-fill{height:100%;background:#1f4ed8;border-radius:3px}
-.chip{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:500}
-.chip-inquiry_submit{background:#fef2f2;color:#991b1b}
-.chip-tour_request{background:#ecfdf5;color:#065f46}
-.chip-cat{display:inline-block;padding:1px 7px;border-radius:3px;font-size:11px;background:#eef2ff;color:#4338ca;margin-right:6px}
-.source-tag{display:inline-block;padding:1px 6px;border-radius:3px;font-size:10px;background:#f3f4f6;color:#6b7280;margin-left:4px;font-weight:500;letter-spacing:.3px}
-.insight{background:#eff6ff;border-left:3px solid #1f4ed8;padding:14px 18px;border-radius:0 8px 8px 0;margin-bottom:10px}
-.insight-title{font-weight:600;margin-bottom:4px;color:#1e3a8a;font-size:14px}
-.insight-body{font-size:13.5px;color:#374151;line-height:1.6}
-.context-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
-.context-block{padding:14px;background:#fafbfc;border:1px solid #eef0f4;border-radius:8px}
-.context-label{font-size:11px;color:#6b7280;text-transform:uppercase;letter-spacing:.5px;font-weight:600;margin-bottom:6px}
-.context-value{font-size:13.5px;color:#1a1d29;line-height:1.5}
-ul.customer-list{margin:0;padding-left:18px;font-size:13px;color:#374151}
-ul.customer-list li{margin-bottom:8px;line-height:1.5}
-ul.customer-list li a{color:#1a1d29;text-decoration:none;border-bottom:1px dashed #cbd5e1}
-ul.customer-list li a:hover{color:#1f4ed8;border-bottom-color:#1f4ed8}
-.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.funnel-wrap{display:flex;align-items:stretch;gap:0;margin-bottom:28px;background:#fff;border-radius:12px;padding:18px;border:1px solid #eef0f4;box-shadow:0 1px 3px rgba(0,0,0,.04);overflow-x:auto}
-.funnel-stage{flex:1;min-width:110px;padding:8px 10px;text-align:center}
-.funnel-label{font-size:11px;color:#6b7280;font-weight:600;letter-spacing:.3px;margin-bottom:6px}
-.funnel-value{font-family:'Inter',sans-serif;font-size:22px;font-weight:700;color:#111827;letter-spacing:-.5px}
-.funnel-unit{font-size:11px;color:#9ca3af;margin-top:2px}
-.funnel-trend{font-size:11px;margin-top:4px;font-weight:500}
-.funnel-trend.up{color:#059669}.funnel-trend.down{color:#dc2626}.funnel-trend.flat{color:#6b7280}
-.funnel-arrow{display:flex;flex-direction:column;justify-content:center;align-items:center;color:#cbd5e1;font-size:18px;font-weight:300;padding:0 4px;min-width:52px}
-.funnel-rate{font-family:'Inter',sans-serif;font-size:11px;color:#6b7280;background:#f3f4f6;border-radius:10px;padding:2px 7px;margin-top:3px;font-weight:500}
-.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:6px}
-.stat-block{padding:16px 14px;background:#fafbfc;border:1px solid #eef0f4;border-radius:10px;text-align:center}
-.stat-value{font-family:'Inter',sans-serif;font-size:26px;font-weight:700;letter-spacing:-.5px;color:#111827;line-height:1.1}
-.stat-value .stat-unit{font-size:13px;color:#9ca3af;font-weight:500;margin-left:3px}
-.stat-value.up{color:#059669}.stat-value.down{color:#dc2626}.stat-value.flat{color:#6b7280}
-.stat-sub{font-size:11px;color:#6b7280;margin-top:6px;font-weight:500}
-.headline-card{background:linear-gradient(135deg,#1e40af 0%,#1f4ed8 100%);color:#fff;border-radius:14px;padding:24px 26px;margin-bottom:24px;box-shadow:0 2px 8px rgba(31,78,216,.2)}
-.headline-card h1{color:#fff;margin:0 0 4px;font-size:28px}
-.headline-card .period{color:#cbd5e1;margin-bottom:18px}
-.headline-card .period .prev{color:#93c5fd}
-.chip-row{display:flex;flex-wrap:wrap;gap:10px}
-.chip-stat{display:inline-flex;align-items:baseline;gap:6px;background:rgba(255,255,255,.12);padding:7px 13px;border-radius:8px;font-size:13px;color:#fff;font-weight:500}
-.chip-stat .chip-label{color:#cbd5e1;font-size:11.5px;font-weight:500}
-.chip-stat b{color:#fff;font-weight:700;font-family:'Inter','Pretendard Variable',sans-serif}
-.toc-float{position:fixed;right:24px;top:50%;transform:translateY(-50%);z-index:50;background:#fff;border-radius:12px;border:1px solid #eef0f4;box-shadow:0 4px 12px rgba(0,0,0,.06);padding:10px 6px;font-size:12px;display:flex;flex-direction:column;gap:2px;min-width:110px}
-.toc-float::before{content:'목차';display:block;font-size:10px;font-weight:700;color:#9ca3af;letter-spacing:.5px;padding:4px 10px 8px;border-bottom:1px solid #f1f3f6;margin-bottom:4px;text-transform:uppercase}
-.toc-item{display:flex;align-items:center;gap:8px;padding:6px 10px;color:#6b7280;text-decoration:none;border-radius:6px;transition:all .15s;font-weight:500}
-.toc-item::before{content:'';width:6px;height:6px;border-radius:50%;background:#d1d5db;flex-shrink:0;transition:all .15s}
-.toc-item:hover{background:#f9fafb;color:#1f4ed8}
-.toc-item:hover::before{background:#1f4ed8}
-.toc-item.active{background:#eff6ff;color:#1f4ed8;font-weight:600}
-.toc-item.active::before{background:#1f4ed8;transform:scale(1.3)}
-.toc-item.toc-top{margin-top:6px;padding-top:8px;border-top:1px solid #f1f3f6;color:#9ca3af;font-size:11px}
-.toc-item.toc-top::before{display:none}
-.toc-item.toc-top:hover{background:#f9fafb;color:#1f4ed8}
-@media (max-width:1200px){.toc-float{display:none}}
-section[id]{scroll-margin-top:16px}
-.market-highlights{display:flex;flex-direction:column;gap:10px;margin-bottom:6px}
-.mh-row{display:flex;align-items:flex-start;gap:10px;padding:12px 14px;background:#fafbfc;border-left:3px solid #1f4ed8;border-radius:0 8px 8px 0;font-size:13.5px}
-.mh-tag{flex-shrink:0;display:inline-block;font-size:10.5px;font-weight:700;padding:3px 8px;border-radius:4px;letter-spacing:.3px;text-transform:uppercase}
-.mh-comp{background:#fef2f2;color:#991b1b}
-.mh-industry{background:#eef2ff;color:#4338ca}
-.mh-customer{background:#ecfdf5;color:#065f46}
-.mh-text{color:#374151;line-height:1.5}
-.mh-text b{color:#111827;font-weight:700}
-.mh-text a{color:#1f4ed8;text-decoration:none}
-.mh-text a:hover{text-decoration:underline}
-.market-detail{margin-top:14px;font-size:13px}
-.market-detail > summary{cursor:pointer;color:#6b7280;font-size:12px;padding:6px 0;list-style:none}
-.market-detail > summary::-webkit-details-marker{display:none}
-.market-detail > summary::before{content:'▸ ';color:#cbd5e1}
-.market-detail[open] > summary::before{content:'▾ '}
-/* CTA 유형별 분석 */
-.cta-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-@media (max-width: 900px){ .cta-grid{grid-template-columns:1fr} }
-.cta-bucket{background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:16px 18px;box-shadow:0 1px 2px rgba(15,23,42,.03)}
-.cta-bucket .bucket-header{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #f1f3f6}
-.cta-bucket .bucket-header h3{font-size:14px;font-weight:700;margin:0;color:#111827}
-.cta-bucket .bucket-total b{font-size:20px;font-weight:800;color:#1f4ed8;letter-spacing:-.5px}
-.cta-bucket .bucket-total{font-size:12px;color:#6b7280}
-.cta-bucket .delta-inline{display:inline-block;margin-left:6px;font-size:11.5px}
-.cta-bucket .bucket-table{width:100%;font-size:13px}
-.cta-bucket .bucket-table td{padding:6px 0;border-bottom:1px solid #f8f9fb}
-.cta-bucket .bucket-table td:last-child{text-align:right;font-weight:600;color:#111827;font-family:'Inter',sans-serif}
-.cta-bucket .bucket-table tr:last-child td{border-bottom:none}
-.delta-up{color:#059669}
-.delta-down{color:#dc2626}
+  :root {
+    --bg: #f8fafc;
+    --surface: #ffffff;
+    --ink: #0f172a;
+    --ink-2: #475569;
+    --ink-3: #94a3b8;
+    --line: #e2e8f0;
+    --brand: #2563eb;
+    --brand-2: #1e40af;
+    --accent-soft: #eff6ff;
+    --green: #15803d;
+    --green-soft: #f0fdf4;
+    --amber: #b45309;
+    --amber-soft: #fffbeb;
+    --red: #b91c1c;
+    --radius: 14px;
+    --max: 1180px;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.55;
+  }
 
-.social-header{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
-.social-title{font-size:14px;font-weight:700;color:#111827}
-.social-main{font-family:'Inter',sans-serif}
-.social-main b{font-size:26px;font-weight:800;color:#111827;letter-spacing:-.5px}
-.social-unit{font-size:13px;color:#6b7280;margin-left:4px;font-weight:500}
-.social-growth{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;padding-top:10px;border-top:1px solid #f1f3f6}
-.growth-inline{display:inline-flex;align-items:center;gap:4px;font-size:12px;padding:3px 10px;border-radius:14px;font-weight:500;background:#f3f4f6;color:#6b7280}
-.growth-inline.up{background:#ecfdf5;color:#047857}
-.growth-inline.down{background:#fef2f2;color:#b91c1c}
-.growth-inline.flat{background:#f3f4f6;color:#6b7280}
-.growth-inline .ref-date{color:#9ca3af;font-size:10.5px;font-weight:500;margin:0 2px}
-footer{margin-top:48px;padding-top:20px;border-top:1px solid #e5e7eb;display:flex;gap:24px;font-size:12.5px;color:#9ca3af;flex-wrap:wrap}
-footer a{color:#6b7280;text-decoration:none}
-footer a:hover{color:#1f4ed8}
-@media (max-width:720px){
-  .kpi-grid{grid-template-columns:repeat(2,1fr)}
-  .context-grid,.grid-2,.stat-grid{grid-template-columns:1fr}
-  h1{font-size:24px}
-  .funnel-wrap{flex-direction:column}
-  .funnel-arrow{flex-direction:row;padding:4px 0}
-  .headline-card{padding:20px}
-}
+  .page { max-width: var(--max); margin: 0 auto; padding: 40px 24px 60px; }
+
+  /* Header */
+  header {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 20px; margin-bottom: 28px; gap: 24px; flex-wrap: wrap;
+  }
+  .eyebrow {
+    font-size: 12px; letter-spacing: 0.12em;
+    color: var(--brand); text-transform: uppercase;
+    font-weight: 700; margin-bottom: 6px;
+  }
+  h1 { font-size: 30px; font-weight: 800; margin: 0; letter-spacing: -0.02em; }
+  .meta { font-size: 13px; color: var(--ink-2); text-align: right; }
+  .meta b { color: var(--ink); font-weight: 600; }
+
+  /* Headline */
+  .headline {
+    background: var(--ink); color: #fff;
+    padding: 28px 32px; border-radius: var(--radius);
+    margin-bottom: 28px;
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 24px; flex-wrap: wrap;
+  }
+  .headline-text {
+    font-size: 19px; font-weight: 700;
+    letter-spacing: -0.01em; line-height: 1.5;
+    max-width: 640px; color: #e2e8f0;
+  }
+  .headline-text span { color: #93c5fd; font-weight: 700; }
+  .headline-kpi { display: flex; gap: 28px; }
+  .kpi { text-align: center; min-width: 150px; max-width: 180px; }
+  .kpi .n {
+    font-size: 26px; font-weight: 800; color: #fff;
+    letter-spacing: -0.02em; line-height: 1.1;
+    font-variant-numeric: tabular-nums;
+  }
+  .kpi .n small { font-size: 14px; font-weight: 700; }
+  .kpi .l { font-size: 11px; color: #94a3b8; margin-top: 6px; letter-spacing: 0.02em; line-height: 1.4; }
+
+  /* Pipeline metrics */
+  .pipeline {
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: var(--radius); padding: 22px 24px; margin-bottom: 24px;
+  }
+  .pipeline-head {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line);
+  }
+  .pipeline-head h3 {
+    font-size: 14px; font-weight: 700; color: var(--ink);
+    margin: 0; letter-spacing: -0.01em;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .pipeline-head h3::before {
+    content: ''; width: 6px; height: 6px;
+    background: var(--brand); border-radius: 50%;
+  }
+  .pipeline-head .source {
+    font-size: 11px; color: var(--ink-3);
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .pipeline-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;
+  }
+  .pipeline-cell {
+    padding: 16px 18px; background: var(--bg);
+    border-radius: 10px; border: 1px solid var(--line);
+  }
+  .p-label {
+    font-size: 12px; color: var(--ink-2);
+    font-weight: 600; margin-bottom: 10px;
+  }
+  .p-current {
+    display: flex; align-items: baseline; gap: 6px;
+    margin-bottom: 10px; padding-bottom: 10px;
+    border-bottom: 1px dashed var(--line);
+  }
+  .p-current .month-tag {
+    font-size: 11px; color: var(--brand); font-weight: 700;
+  }
+  .p-current .p-big {
+    font-size: 26px; font-weight: 800;
+    color: var(--ink); letter-spacing: -0.02em;
+    font-variant-numeric: tabular-nums; line-height: 1;
+  }
+  .p-current .p-big small {
+    font-size: 13px; font-weight: 600;
+    color: var(--ink-2); margin-left: 2px;
+  }
+  .p-sub {
+    display: flex; flex-direction: column; gap: 4px;
+    font-size: 11px; color: var(--ink-3);
+  }
+  .p-sub-row { display: flex; justify-content: space-between; }
+  .p-sub-row .key { color: var(--ink-2); font-weight: 600; }
+  .p-sub-row .val { font-variant-numeric: tabular-nums; font-weight: 600; color: var(--ink-2); }
+  .p-sub-row .val .trend-down { color: var(--red); font-weight: 700; margin-left: 2px; }
+  .p-sub-row .val .trend-up { color: var(--green); font-weight: 700; margin-left: 2px; }
+  .pipeline-foot {
+    margin-top: 12px; padding-top: 10px;
+    border-top: 1px solid var(--line);
+    font-size: 11px; color: var(--ink-3);
+    line-height: 1.5;
+  }
+  .pipeline-foot code {
+    font-family: 'JetBrains Mono', monospace;
+    background: var(--bg); padding: 1px 6px; border-radius: 4px;
+    font-size: 10px; color: var(--ink-2);
+  }
+  @media (max-width: 900px) {
+    .pipeline-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* Pipeline row labels & col-link (2026-04 CEO funnel restructure) */
+  .pipeline-row-label {
+    font: 700 13px/1.4 'Pretendard', sans-serif;
+    color: var(--ink-2); margin: 18px 0 8px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .pipeline-row-label:first-of-type { margin-top: 6px; }
+  .pipeline-row-label::before {
+    content: "•"; color: var(--brand);
+    font-size: 18px; line-height: 1;
+  }
+  .pipeline-cell .p-big.placeholder {
+    font-size: 14px; color: var(--ink-3); font-weight: 600;
+  }
+  .col-link {
+    margin-top: 14px; padding: 10px 12px;
+    background: var(--accent-soft); border-radius: 6px;
+    font: 500 12px/1.5 'Pretendard', sans-serif;
+    color: var(--brand-2);
+  }
+  .col-link b { color: var(--brand-2); font-weight: 700; }
+  .col-link .trend-down { color: var(--red); font-weight: 700; }
+
+  /* 3-column grid */
+  .grid3 {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 16px; margin-bottom: 24px;
+  }
+  .col {
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: var(--radius); padding: 22px 22px 20px;
+    display: flex; flex-direction: column;
+  }
+  .col-head {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 16px; padding-bottom: 14px;
+    border-bottom: 1px solid var(--line);
+  }
+  .col-head .icon {
+    width: 36px; height: 36px;
+    background: var(--accent-soft); color: var(--brand-2);
+    border-radius: 8px;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 18px; font-weight: 700;
+  }
+  .col-head h2 { font-size: 16px; font-weight: 700; margin: 0; letter-spacing: -0.01em; }
+  .col-head .sub { font-size: 12px; color: var(--ink-3); margin-top: 2px; }
+
+  .item { padding: 12px 0; border-bottom: 1px dashed var(--line); }
+  .item:last-child { border-bottom: none; padding-bottom: 0; }
+  .item:first-child { padding-top: 0; }
+  .item .t {
+    font-size: 14px; font-weight: 600; color: var(--ink);
+    margin-bottom: 4px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  }
+  .badge {
+    display: inline-block; padding: 2px 8px; border-radius: 999px;
+    font-size: 10px; font-weight: 700; letter-spacing: 0.02em;
+  }
+  .badge.done { background: var(--green-soft); color: var(--green); }
+  .badge.prog { background: var(--amber-soft); color: var(--amber); }
+  .badge.new { background: var(--accent-soft); color: var(--brand-2); }
+  .item .d { font-size: 13px; color: var(--ink-2); line-height: 1.55; }
+  .item .m {
+    font-size: 12px; color: var(--ink-3);
+    margin-top: 4px; font-variant-numeric: tabular-nums;
+  }
+  .item .m b { color: var(--brand); font-weight: 700; font-size: 13px; }
+
+  /* Timeline - Hero + Categories */
+  .timeline-box {
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: var(--radius); padding: 22px 24px; margin-bottom: 24px;
+  }
+  .tl-title {
+    font-size: 13px; font-weight: 700; color: var(--ink);
+    letter-spacing: -0.01em; margin-bottom: 14px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .tl-title::before {
+    content: ''; width: 6px; height: 6px;
+    background: var(--brand); border-radius: 50%;
+  }
+  .tl-hero {
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    border: 1px solid #bfdbfe; border-radius: 10px;
+    padding: 18px 22px; margin-bottom: 18px;
+    display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+  }
+  .tl-hero .hero-date {
+    font-size: 18px; font-weight: 800; color: var(--brand-2);
+    letter-spacing: 0.01em; white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+    padding-right: 20px; border-right: 2px solid #bfdbfe;
+  }
+  .tl-hero .hero-content { flex: 1; min-width: 240px; }
+  .tl-hero .hero-event {
+    font-size: 16px; font-weight: 700; color: var(--ink);
+    margin-bottom: 3px; letter-spacing: -0.01em;
+  }
+  .tl-hero .hero-sub { font-size: 12px; color: var(--ink-2); }
+  .tl-hero .hero-badge {
+    background: var(--brand); color: #fff;
+    font-size: 11px; font-weight: 700;
+    padding: 4px 10px; border-radius: 999px; letter-spacing: 0.02em;
+  }
+
+  .tl-cats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .tl-cat { padding-left: 14px; border-left: 3px solid var(--line); }
+  .tl-cat .cat-label {
+    font-size: 11px; font-weight: 700; color: var(--ink-3);
+    letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 10px;
+  }
+  .tl-cat ul { margin: 0; padding: 0; list-style: none; }
+  .tl-cat li {
+    font-size: 13px; color: var(--ink); line-height: 1.5;
+    padding: 4px 0; display: flex; justify-content: space-between;
+    gap: 12px; align-items: baseline;
+  }
+  .tl-cat li + li { border-top: 1px dashed var(--line); margin-top: 2px; }
+  .tl-cat li .when {
+    font-size: 11px; color: var(--brand);
+    font-weight: 600; white-space: nowrap;
+  }
+
+  /* Link list */
+  .links {
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: var(--radius); padding: 22px 24px;
+  }
+  .links-title {
+    font-size: 13px; font-weight: 700; color: var(--ink);
+    margin-bottom: 16px; letter-spacing: -0.01em;
+  }
+  .link-group { margin-bottom: 18px; }
+  .link-group:last-child { margin-bottom: 0; }
+  .link-group .group-label {
+    font-size: 11px; font-weight: 700; color: var(--ink-3);
+    letter-spacing: 0.08em; text-transform: uppercase;
+    margin-bottom: 8px; padding-bottom: 6px;
+    border-bottom: 1px solid var(--line);
+  }
+  .link-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 8px;
+  }
+  .link-grid a {
+    font-size: 13px; color: var(--ink); text-decoration: none;
+    padding: 8px 12px; border-radius: 8px;
+    border: 1px solid var(--line);
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 8px; transition: all 0.15s;
+  }
+  .link-grid a:hover {
+    border-color: var(--brand);
+    background: var(--accent-soft); color: var(--brand-2);
+  }
+  .link-grid .arr {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--ink-3); font-size: 14px;
+  }
+
+  footer {
+    margin-top: 24px; font-size: 12px;
+    color: var(--ink-3); text-align: center; line-height: 1.6;
+  }
+  footer code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; color: var(--ink-2);
+  }
+
+  @media (max-width: 900px) {
+    .grid3 { grid-template-columns: 1fr; }
+    .headline { flex-direction: column; align-items: flex-start; }
+    h1 { font-size: 24px; }
+    .tl-hero { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .tl-hero .hero-date { border-right: none; padding-right: 0; padding-bottom: 8px; border-bottom: 2px solid #bfdbfe; width: 100%; }
+    .tl-cats { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body>
-<div class="wrap" id="top">
-  <div class="headline-card">
-    <h1>2026년 4월 성과</h1>
-    P26년 4월 1일(수) ~ 4월 30일(목) P26년 3월 (3/1 ~ 3/31)</span></div>
-    <div class="chip-row"><span class="chip-stat"><span class="chip-label">방문</span><b>5,467</b></span><span class="chip-stat"><span class="chip-label">제품 문의</span><b>6</b>건</span><span class="chip-stat"><span class="chip-label">사옥 투어</span><b>2</b>건</span><span class="chip-stat"><span class="chip-label">검색 (Organic)</span><b>3,157</b></span></div>
+
+<div class="page">
+
+  <header>
+    <div>
+      <div class="eyebrow">BX Team &middot; Monthly Report</div>
+      <h1>BX팀 월간 성과 리포트 &middot; 2026년 4월</h1>
+    </div>
+    <div class="meta">
+      <div><b>발행일</b> 2026.04.22</div>
+      <div><b>기간</b> 2026.04.01 ~ 2026.04.30 &middot; 매월 정기 발행</div>
+    </div>
+  </header>
+
+  <div class="headline">
+    <div class="headline-text">
+      4월 BX팀은 <span>신한 고객성공사례 영상 공개</span>와 <span>세일즈 툴킷 제작</span>,<br><span>5월 AWS Summit 부스 준비</span>에 집중했습니다.
+    </div>
+    <div class="headline-kpi">
+      <div class="kpi"><div class="n">64<small>명</small></div><div class="l">3월 SQL 세미나 참석자<br>만족도 8.64 / 10 (4월 집계)</div></div>
+      <div class="kpi"><div class="n">28<small>명</small></div><div class="l">세미나 후속 요청 (45.9%)<br>exemONE · eXemble 자료·데모</div></div>
+      <div class="kpi"><div class="n">+30</div><div class="l">뉴스레터 구독자 순증<br>(4월 2,832명, 전월 대비)</div></div>
+    </div>
   </div>
 
-  <div class="kpi-grid">
-        <div class="kpi-card">
-          <div class="kpi-label">방문</div>
-          <div class="kpi-value">5,467</div>
-          <div class="kpi-trend down">↓ 전월 대비 -36.8%</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">제품 문의</div>
-          <div class="kpi-value">6건</div>
-          <div class="kpi-trend down">↓ 전월 대비 -40.0%</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">사옥 투어</div>
-          <div class="kpi-value">2건</div>
-          <div class="kpi-trend down">↓ 전월 대비 -50.0%</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">브로슈어 다운로드</div>
-          <div class="kpi-value">147건</div>
-          <div class="kpi-trend down">↓ 전월 대비 -38.5%</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">뉴스레터 구독 클릭</div>
-          <div class="kpi-value">14건</div>
-          <div class="kpi-trend up">↑ 전월 대비 +40.0%</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">블로그 CTA 클릭</div>
-          <div class="kpi-value">15건</div>
-          <div class="kpi-trend down">↓ 전월 대비 -40.0%</div>
-        </div></div>
+  <!-- 4월 월간 퍼널 성과 (3행 구조: Awareness / Engagement / Conversion) -->
+  <div class="pipeline">
+    <div class="pipeline-head">
+      <h3>4월 월간 퍼널 성과</h3>
+      <div class="source">admin.ex-em.com &middot; 뉴스레터 &middot; 세미나 결과보고</div>
+    </div>
 
-  <section id="sec-overview">
-    <h2>1. 퍼널 개요 (유입 → 전환)</h2>
-    <p class="section-lead">한눈에 보는 마케팅 퍼널입니다. 각 단계 사이 숫자는 다음 단계로 넘어간 비율(통과율). 통과율이 낮은 구간이 지난달 개선 포인트입니다.</p>
-    <div class="funnel-wrap">
-        <div class="funnel-stage">
-          <div class="funnel-label">1. 유입</div>
-          <div class="funnel-value">5,467</div>
-          <div class="funnel-unit">세션</div>
-          <div class="funnel-trend down">↓ -36.8%</div>
-        </div><div class="funnel-arrow">→<div class="funnel-rate">27.3%</div></div>
-        <div class="funnel-stage">
-          <div class="funnel-label">2. 콘텐츠 소비</div>
-          <div class="funnel-value">1,495</div>
-          <div class="funnel-unit">조회</div>
-          
-        </div><div class="funnel-arrow">→<div class="funnel-rate">11.8%</div></div>
-        <div class="funnel-stage">
-          <div class="funnel-label">3. 관심 행동</div>
-          <div class="funnel-value">176</div>
-          <div class="funnel-unit">건</div>
-          
-        </div><div class="funnel-arrow">→<div class="funnel-rate">4.5%</div></div>
-        <div class="funnel-stage">
-          <div class="funnel-label">4. 전환</div>
-          <div class="funnel-value">8</div>
-          <div class="funnel-unit">건</div>
-          <div class="funnel-trend down">↓ -42.9%</div>
-        </div></div>
-  </section>
+    <!-- Row 1: Awareness -->
+    <div class="pipeline-row-label">① Awareness &mdash; 얼마나 많이 보였나</div>
+    <div class="pipeline-grid">
 
-  <section id="sec-entry">
-    <h2>2. 유입 (웹사이트 방문)</h2>
-    <p class="section-lead">채널별 방문 수와 전환율을 함께 봅니다. 방문이 많아도 전환으로 이어지지 않으면 그 유입은 품질이 낮은 것입니다.</p>
-    <div class="card">
-      <table>
-        <thead><tr><th>채널</th><th></th><th class="num">세션</th><th class="num">비중</th><th class="num">전환</th><th class="num">전환율</th></tr></thead>
-        <tbody>
-        <tr>
-          <td>검색 (Organic) <span class="muted">(google, naver)</span></td>
-          <td><div class="bar-track"><div class="bar-fill" style="width:63.0%"></div></div></td>
-          <td class="num">3,157</td>
-          <td class="num">63.0%</td>
-          <td class="num">136건</td>
-          <td class="num" style="color:#059669">4.31%</td>
-        </tr>
-        <tr>
-          <td>직접 유입 <span class="muted">(직접)</span></td>
-          <td><div class="bar-track"><div class="bar-fill" style="width:26.9%"></div></div></td>
-          <td class="num">1,347</td>
-          <td class="num">26.9%</td>
-          <td class="num">11건</td>
-          <td class="num" style="color:#6b7280">0.82%</td>
-        </tr>
-        <tr>
-          <td>외부 사이트 <span class="muted">(kdclub.com, ex-em.com)</span></td>
-          <td><div class="bar-track"><div class="bar-fill" style="width:5.0%"></div></div></td>
-          <td class="num">249</td>
-          <td class="num">5.0%</td>
-          <td class="num">4건</td>
-          <td class="num" style="color:#059669">1.61%</td>
-        </tr>
-        <tr>
-          <td>미분류 <span class="muted">((not set), saramin)</span></td>
-          <td><div class="bar-track"><div class="bar-fill" style="width:2.5%"></div></div></td>
-          <td class="num">127</td>
-          <td class="num">2.5%</td>
-          <td class="num">5건</td>
-          <td class="num" style="color:#059669">3.94%</td>
-        </tr>
-        <tr>
-          <td>이메일 <span class="muted">(newsletter)</span></td>
-          <td><div class="bar-track"><div class="bar-fill" style="width:1.2%"></div></div></td>
-          <td class="num">61</td>
-          <td class="num">1.2%</td>
-          <td class="num">1건</td>
-          <td class="num" style="color:#059669">1.64%</td>
-        </tr>
-        <tr>
-          <td>소셜 <span class="muted">(linkedin.com, ig)</span></td>
-          <td><div class="bar-track"><div class="bar-fill" style="width:0.9%"></div></div></td>
-          <td class="num">44</td>
-          <td class="num">0.9%</td>
-          <td class="num">0건</td>
-          <td class="num" style="color:#6b7280">0.00%</td>
-        </tr>
-        <tr>
-          <td>비디오 <span class="muted">(youtube.com)</span></td>
-          <td><div class="bar-track"><div class="bar-fill" style="width:0.6%"></div></div></td>
-          <td class="num">30</td>
-          <td class="num">0.6%</td>
-          <td class="num">4건</td>
-          <td class="num" style="color:#059669">13.33%</td>
-        </tr></tbody>
-      </table>
-      <div class="sub-title" style="margin-top:20px">소스 세분화 (상위 10개)</div>
-      <p class="section-lead" style="margin:-8px 0 12px">같은 '검색' 안에서도 구글인지 네이버인지 구분해서 봅니다.</p>
-      <table>
-        <thead><tr><th>채널</th><th>소스</th><th class="num">세션</th></tr></thead>
-        <tbody><tr><td>검색 (Organic)</td><td>google</td><td class="num">2,524</td></tr><tr><td>직접 유입</td><td>직접</td><td class="num">1,538</td></tr><tr><td>검색 (Organic)</td><td>naver</td><td class="num">555</td></tr><tr><td>검색 (Organic)</td><td>m.search.naver.com</td><td class="num">357</td></tr><tr><td>외부 사이트</td><td>kdclub.com</td><td class="num">75</td></tr><tr><td>미분류</td><td>(not set)</td><td class="num">68</td></tr><tr><td>검색 (Organic)</td><td>bing</td><td class="num">50</td></tr><tr><td>이메일</td><td>newsletter</td><td class="num">48</td></tr><tr><td>비디오</td><td>youtube.com</td><td class="num">37</td></tr><tr><td>검색 (Organic)</td><td>daum</td><td class="num">24</td></tr></tbody>
-      </table>
-    </div>
-    <div class="card">
-      <div class="sub-title">생성형 AI 인용 유입 <span class="kpi-trend down" style="margin-left:6px;font-size:11px">↓ 전월 대비 -10.0%</span></div>
-      <p class="section-lead" style="margin:-8px 0 12px">생성형 AI(ChatGPT·Perplexity 등)가 답변에 엑셈을 인용해 들어온 유입입니다. AI 시대의 SEO 지표라 추세 관찰이 중요합니다.</p>
-      <div class="summary-line" style="margin-bottom:14px;background:#fdf4ff;border-color:#f5d0fe;color:#86198f">지난달 AI 경유 유입 <strong>45건</strong> · 전주 50건</div>
-      <table>
-        <thead><tr><th>AI 서비스</th><th class="num">세션</th><th class="num">참여율</th></tr></thead>
-        <tbody>
-        <tr>
-          <td><strong>ChatGPT</strong> <span class="muted">chatgpt.com</span></td>
-          <td class="num">19</td>
-          <td class="num">68.4%</td>
-        </tr>
-        <tr>
-          <td><strong>Gemini</strong> <span class="muted">gemini.google.com</span></td>
-          <td class="num">15</td>
-          <td class="num">40.0%</td>
-        </tr>
-        <tr>
-          <td><strong>Perplexity</strong> <span class="muted">perplexity.ai</span></td>
-          <td class="num">9</td>
-          <td class="num">66.7%</td>
-        </tr>
-        <tr>
-          <td><strong>Claude</strong> <span class="muted">claude.ai</span></td>
-          <td class="num">2</td>
-          <td class="num">50.0%</td>
-        </tr></tbody>
-      </table>
-    </div>
-  </section>
-
-  <section id="sec-content">
-    <h2>3. 콘텐츠 소비</h2>
-    <p class="section-lead">방문자가 실제로 어떤 콘텐츠를 읽었는지 봅니다. 블로그 조회·랜딩 페이지·CTA 클릭 3가지 관점으로 살핍니다.</p>
-    <div class="card">
-      <div class="sub-title">블로그 TOP 10</div>
-      <table>
-        <thead><tr><th>페이지</th><th class="num">조회</th><th class="num">평균 체류</th></tr></thead>
-        <tbody>
-        <tr>
-          <td><a href="https://ex-em.com/ko/blog/ai-test-code-automation-experience-lessons-learned" target="_blank">QA도, 시간도 없던 팀이 AI Agent로 테스트 자동화를 정착시킨 방법</a></td>
-          <td class="num">503</td>
-          <td class="num">192초</td>
-        </tr>
-        <tr>
-          <td><a href="https://ex-em.com/ko/blog/intermax-case-study-shinhan-bank" target="_blank">신한은행</a></td>
-          <td class="num">72</td>
-          <td class="num">128초</td>
-        </tr>
-        <tr>
-          <td><a href="https://ex-em.com/ko/blog/nl2sql-agent-enterprise-db-design-optimization" target="_blank">복잡한 기업용 DB 스키마 환경에서의 NL2SQL 에이전트 설계 및 최적화 과정</a></td>
-          <td class="num">69</td>
-          <td class="num">107초</td>
-        </tr>
-        <tr>
-          <td><a href="https://ex-em.com/ko/blog/sse-ai-chat-streaming-architecture" target="_blank">SSE 이벤트 프로토콜로 AI 채팅 스트리밍 설계하기</a></td>
-          <td class="num">64</td>
-          <td class="num">179초</td>
-        </tr>
-        <tr>
-          <td><a href="https://ex-em.com/ko/blog/book-postgresql-wait-interface" target="_blank">「PostgreSQL Wait Interface」출간: Wait Event로 이해하는 PostgreSQL 성</a></td>
-          <td class="num">59</td>
-          <td class="num">68초</td>
-        </tr>
-        <tr>
-          <td><a href="https://ex-em.com/ko/blog/it-infrastructure-checklist-government-system-preventive-inspection" target="_blank">범정부 정보시스템 예방점검체계 대응 전략: IT 운영팀을 위한 6가지 인프라 점검 체크리스트</a></td>
-          <td class="num">59</td>
-          <td class="num">197초</td>
-        </tr>
-        <tr>
-          <td><a href="https://ex-em.com/ko/blog/ai-sql-optimization-slow-query-problem" target="_blank">느린 쿼리 튜닝에 하루를 쓴다면? AI SQL 최적화가 필요한 순간</a></td>
-          <td class="num">55</td>
-          <td class="num">210초</td>
-        </tr>
-        <tr>
-          <td><a href="https://ex-em.com/ko/blog/ai-software-value-focused-environment-building" target="_blank">AI를 잘 쓰는 팀 vs 못 쓰는 팀, 단 하나의 차이</a></td>
-          <td class="num">54</td>
-          <td class="num">132초</td>
-        </tr>
-        <tr>
-          <td><a href="https://ex-em.com/ko/blog/interview-data-scientist-workflow-problem-to-solution" target="_blank">문제 정의부터 서비스 적용까지: 데이터로 비즈니스의 답을 만드는 데이터 사이언티스트의 일하는 방식</a></td>
-          <td class="num">52</td>
-          <td class="num">50초</td>
-        </tr>
-        <tr>
-          <td><a href="https://ex-em.com/ko/blog/developer-interview-beyond-code-business-context" target="_blank">코드 너머 비즈니스의 맥락까지: 엑셈 개발자는 어떻게 ‘함께’ 결과를 만드나</a></td>
-          <td class="num">48</td>
-          <td class="num">101초</td>
-        </tr></tbody>
-      </table>
-    </div>
-    <div class="card">
-      <div class="sub-title">랜딩 페이지 TOP 8</div>
-      <p class="section-lead" style="margin:-8px 0 12px">외부에서 들어와 처음 본 페이지입니다. 사이트의 첫인상이자 다음 행동의 시작점입니다.</p>
-      <table>
-        <thead><tr><th>페이지</th><th>유형</th><th class="num">세션</th><th class="num">참여율</th></tr></thead>
-        <tbody>
-        <tr>
-          <td><a href="https://ex-em.com/ko" target="_blank">/ko</a></td>
-          <td><span class="chip-cat">기타</span></td>
-          <td class="num">1,993</td>
-          <td class="num">61.1%</td>
-        </tr>
-        <tr>
-          <td><a href="https://ex-em.com/ko/blog/ai-test-code-automation-experience-lessons-learned" target="_blank">/ko/blog/ai-test-code-automation-experience-lessons-learned</a></td>
-          <td><span class="chip-cat">블로그</span></td>
-          <td class="num">299</td>
-          <td class="num">70.6%</td>
-        </tr>
-        <tr>
-          <td><a href="https://ex-em.com/en" target="_blank">/en</a></td>
-          <td><span class="chip-cat">기타</span></td>
-          <td class="num">253</td>
-          <td class="num">41.5%</td>
-        </tr>
-        <tr>
-          <td><a href="https://ex-em.com/ko/blog" target="_blank">/ko/blog</a></td>
-          <td><span class="chip-cat">기타</span></td>
-          <td class="num">145</td>
-          <td class="num">72.4%</td>
-        </tr>
-        <tr>
-          <td><a href="https://ex-em.com/ko/blog/2beddf18253e80dcba20f23ce6af5daa" target="_blank">/ko/blog/2beddf18253e80dcba20f23ce6af5daa</a></td>
-          <td><span class="chip-cat">블로그</span></td>
-          <td class="num">136</td>
-          <td class="num">98.5%</td>
-        </tr>
-        <tr>
-          <td><a href="https://ex-em.com/en/blog/ai-test-code-automation-experience-lessons-learned" target="_blank">/en/blog/ai-test-code-automation-experience-lessons-learned</a></td>
-          <td><span class="chip-cat">블로그</span></td>
-          <td class="num">135</td>
-          <td class="num">80.7%</td>
-        </tr>
-        <tr>
-          <td><a href="https://ex-em.com/ko/resource/company" target="_blank">/ko/resource/company</a></td>
-          <td><span class="chip-cat">회사소개</span></td>
-          <td class="num">122</td>
-          <td class="num">77.0%</td>
-        </tr>
-        <tr>
-          <td><a href="https://ex-em.com/ko/service/database" target="_blank">/ko/service/database</a></td>
-          <td><span class="chip-cat">기타</span></td>
-          <td class="num">101</td>
-          <td class="num">82.2%</td>
-        </tr></tbody>
-      </table>
-    </div>
-    <div class="card">
-      <div class="sub-title">블로그 CTA 클릭이 발생한 페이지</div>
-      <p class="section-lead" style="margin:-8px 0 12px">블로그 안 CTA가 실제 클릭된 페이지입니다. 읽히기만 한 글이 아니라 다음 행동(문의·브로슈어)까지 이어진 콘텐츠입니다. <span class="muted">(태그 미적용 영역은 과소 집계될 수 있음)</span></p>
-      <table>
-        <thead><tr><th>페이지</th><th class="num">CTA 클릭</th></tr></thead>
-        <tbody>
-        <tr>
-          <td><a href="https://ex-em.com/ko/blog/rum-vs-apm-complete-guide" target="_blank">같은 지표, 다른 관점: RUM vs APM 제대로 알기</a></td>
-          <td class="num">5건</td>
-        </tr>
-        <tr>
-          <td><a href="https://ex-em.com/ko/blog/ai-test-code-automation-experience-lessons-learned" target="_blank">QA도, 시간도 없던 팀이 AI Agent로 테스트 자동화를 정착시킨 방법</a></td>
-          <td class="num">3건</td>
-        </tr>
-        <tr>
-          <td><a href="https://ex-em.com/ko/blog/developer-interview-beyond-code-business-context" target="_blank">코드 너머 비즈니스의 맥락까지: 엑셈 개발자는 어떻게 ‘함께’ 결과를 만드나</a></td>
-          <td class="num">2건</td>
-        </tr>
-        <tr>
-          <td><a href="https://ex-em.com/ko/blog/iac-provisioning-repository-registry" target="_blank">왜 요즘 인프라 이야기엔 ‘IaC’가 빠지지 않을까?</a></td>
-          <td class="num">2건</td>
-        </tr>
-        <tr>
-          <td><a href="https://ex-em.com/ko/blog/sse-ai-chat-streaming-architecture" target="_blank">SSE 이벤트 프로토콜로 AI 채팅 스트리밍 설계하기</a></td>
-          <td class="num">2건</td>
-        </tr>
-        <tr>
-          <td><a href="https://ex-em.com/ko/blog/exem-website-renewal-dev-story" target="_blank">엑셈 홈페이지 리뉴얼, 1인 개발 스토리</a></td>
-          <td class="num">1건</td>
-        </tr></tbody>
-      </table>
-    </div>
-  </section>
-
-  <section id="sec-social">
-    <h2>4. 소셜 채널 성장</h2>
-    <p class="section-lead">구독자·팔로워 누적이 본질 지표입니다. 지난달 발행물은 부가 정보로 봅니다.</p>
-    
-    <div class="card">
-      <div class="social-header">
-        <div class="social-title">엑셈뷰 뉴스레터</div>
-        <div class="social-main"><b>2,832</b><span class="social-unit">명 구독 중</span> <span class="muted" style="font-size:11.5px">(04/22 기준)</span></div>
+      <div class="pipeline-cell">
+        <div class="p-label">웹사이트 세션</div>
+        <div class="p-current">
+          <span class="month-tag">4/1~22</span>
+          <span class="p-big">5,472</span>
+        </div>
+        <div class="p-sub">
+          <div class="p-sub-row"><span class="key">3월 동기</span><span class="val">5,960 <span class="trend-down">↓</span></span></div>
+          <div class="p-sub-row"><span class="key">YTD</span><span class="val">30,337</span></div>
+        </div>
       </div>
-      <div class="social-growth"><span class="growth-inline up">지난달 대비 <span class="ref-date">(03/31)</span> +30명</span><span class="growth-inline up">전월 대비 <span class="ref-date">(03/31)</span> +30명</span></div>
-      
-      <div class="sub-title" style="margin-top:18px;font-size:12px">최근 발송 3건 비교</div>
-      <table>
-        <thead><tr><th>발송일</th><th>캠페인</th><th class="num">구독자 수</th><th class="num">오픈율</th><th class="num">클릭률</th></tr></thead>
-        <tbody>
-              <tr><td>03/31 <span class='muted'>(30일 전)</span></td><td><a href="https://stib.ee/w4lL" target="_blank">✅ 공공 IT 담당자가 반드시 점검해야 할 예방점검체계 체크리스트(+도서 선물 이벤트)</a></td><td class="num">2,802</td><td class="num">48.9%</td><td class="num">7.2%</td></tr>
-              <tr><td>02/27 <span class='muted'>(62일 전)</span></td><td><a href="https://stib.ee/QxIL" target="_blank">🧐 AI 경쟁, 아직도 모델 성능만 보고 계신가요?</a></td><td class="num">2,653</td><td class="num">57.7%</td><td class="num">15.8%</td></tr>
-              <tr><td>01/30 <span class='muted'>(90일 전)</span></td><td><a href="https://stib.ee/aPsI" target="_blank">💻 반복된 운영 장애가 시사하는 바는 무엇일까요?</a></td><td class="num">2,691</td><td class="num">61.8%</td><td class="num">19.4%</td></tr></tbody>
-      </table>
-    </div>
-    
-    <div class="card">
-      <div class="social-header">
-        <div class="social-title">인스타그램 @exem_kr</div>
-        <div class="social-main"><b>435</b><span class="social-unit">명 팔로워</span></div>
-      </div>
-      <div class="social-growth"><span class="growth-inline up">전월 대비 <span class="ref-date">(04/02)</span> +2명</span></div>
-      
-      <div class="sub-title" style="margin-top:18px;font-size:12px">최근 발행 5건 · 지난달 발행 <b>4</b>건</div>
-      <table>
-        <thead><tr><th>발행일</th><th>게시물</th><th class="num">도달</th><th class="num">조회</th><th class="num">반응</th></tr></thead>
-        <tbody>
-              <tr><td>04/10 <span class='muted'>(20일 전)</span></td><td><a href="https://www.instagram.com/p/DW8YpZdk3E2/" target="_blank">운영 현장에서 마주한 PostgreSQL 성능 문제를 한 권의 책으로 출간했습니다.</a> <span class="muted">카루셀</span></td><td class="num">92</td><td class="num">233</td><td class="num">7</td></tr>
-              <tr><td>04/08 <span class='muted'>(22일 전)</span></td><td><a href="https://www.instagram.com/p/DW2gg0Ik0-i/" target="_blank">비활성 탭에서 답변이 끊기는 문제부터 Nginx 버퍼링으로 인한 첫 토큰 지연까지, 운영에</a> <span class="muted">카루셀</span></td><td class="num">105</td><td class="num">274</td><td class="num">5</td></tr>
-              <tr><td>04/03 <span class='muted'>(27일 전)</span></td><td><a href="https://www.instagram.com/p/DWqBfIiE9oN/" target="_blank">신청 오픈 3일 만에 전석 마감, 대기업·금융권·공공기관의 DB 운영 담당자 60여 명이 </a> <span class="muted">카루셀</span></td><td class="num">146</td><td class="num">348</td><td class="num">6</td></tr>
-              <tr><td>04/01 <span class='muted'>(29일 전)</span></td><td><a href="https://www.instagram.com/p/DWkmIPiE2ay/" target="_blank">서버마다 흩어진 인증, Nginx 하나로 모았습니다. </a> <span class="muted">카루셀</span></td><td class="num">99</td><td class="num">281</td><td class="num">3</td></tr>
-              <tr><td>03/09 <span class='muted'>(52일 전)</span></td><td><a href="https://www.instagram.com/p/DVqCkYKE54g/" target="_blank">인프라부터 Kubernetes까지, 영역을 넓힐수록 설계를 보는 시각도 깊어졌습니다.</a> <span class="muted">카루셀</span></td><td class="num">133</td><td class="num">326</td><td class="num">7</td></tr></tbody>
-      </table>
-    </div>
-  </section>
 
-  <section id="sec-cta">
-    <h2>5. CTA 유형별 분석</h2>
-    <p class="section-lead">방문자가 누른 실제 행동 버튼을 전환·관심 신호·확산 세 갈래로 나눠 봅니다. 전월 대비 증감으로 최근 흐름을 확인할 수 있어요.</p>
-    <div class="cta-grid">
-      
-      <div class="cta-bucket">
-        <div class="bucket-header">
-          <h3>전환</h3>
-          <div class="bucket-total"><b>351</b>회 <span class="delta-inline"><span class="delta-down">-254 (-42%)</span></span></div>
+      <div class="pipeline-cell">
+        <div class="p-label">신규 방문자</div>
+        <div class="p-current">
+          <span class="month-tag">4/1~22</span>
+          <span class="p-big">3,616</span>
         </div>
-        <table class="bucket-table">
-          <tbody><tr><td>파일 다운로드</td><td class="num">190</td></tr><tr><td>브로슈어 다운로드</td><td class="num">147</td></tr><tr><td>문의 제출</td><td class="num">7</td></tr><tr><td>투어 신청</td><td class="num">7</td></tr></tbody>
-        </table>
+        <div class="p-sub">
+          <div class="p-sub-row"><span class="key">3월 동기</span><span class="val">4,003 <span class="trend-down">↓</span></span></div>
+          <div class="p-sub-row"><span class="key">YTD</span><span class="val">21,372</span></div>
+        </div>
       </div>
-      <div class="cta-bucket">
-        <div class="bucket-header">
-          <h3>관심 신호</h3>
-          <div class="bucket-total"><b>1,875</b>회 <span class="delta-inline"><span class="delta-down">-374 (-17%)</span></span></div>
+
+      <div class="pipeline-cell">
+        <div class="p-label">블로그 CTA (참조)</div>
+        <div class="p-current">
+          <span class="month-tag">4월</span>
+          <span class="p-big">1<small>건</small></span>
         </div>
-        <table class="bucket-table">
-          <tbody><tr><td>홈페이지 CTA</td><td class="num">1,338</td></tr><tr><td>문의 페이지 도달</td><td class="num">508</td></tr><tr><td>블로그 CTA</td><td class="num">15</td></tr><tr><td>뉴스레터 구독</td><td class="num">14</td></tr></tbody>
-        </table>
+        <div class="p-sub">
+          <div class="p-sub-row"><span class="key">3월</span><span class="val">7건 <span class="trend-down">↓</span></span></div>
+          <div class="p-sub-row"><span class="key">YTD</span><span class="val">17건</span></div>
+        </div>
       </div>
-      <div class="cta-bucket">
-        <div class="bucket-header">
-          <h3>확산</h3>
-          <div class="bucket-total"><b>461</b>회 <span class="delta-inline"><span class="delta-down">-351 (-43%)</span></span></div>
+
+      <div class="pipeline-cell">
+        <div class="p-label">소셜 유입</div>
+        <div class="p-current">
+          <span class="month-tag">4/1~22</span>
+          <span class="p-big">44</span>
         </div>
-        <table class="bucket-table">
-          <tbody><tr><td>외부 링크</td><td class="num">284</td></tr><tr><td>채용 페이지</td><td class="num">156</td></tr><tr><td>SNS 채널 이동</td><td class="num">21</td></tr></tbody>
-        </table>
+        <div class="p-sub">
+          <div class="p-sub-row"><span class="key">3월 전체</span><span class="val">125</span></div>
+          <div class="p-sub-row"><span class="key">채널</span><span class="val">GA4 Social</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Row 2: Engagement -->
+    <div class="pipeline-row-label">② Engagement &mdash; 얼마나 반응했나</div>
+    <div class="pipeline-grid">
+
+      <div class="pipeline-cell">
+        <div class="p-label">뉴스레터 구독자</div>
+        <div class="p-current">
+          <span class="month-tag">4월</span>
+          <span class="p-big">2,832<small>명</small></span>
+        </div>
+        <div class="p-sub">
+          <div class="p-sub-row"><span class="key">3/31</span><span class="val">2,802명 <span class="trend-up">↑</span></span></div>
+          <div class="p-sub-row"><span class="key">순증</span><span class="val">+30명</span></div>
+        </div>
+      </div>
+
+      <div class="pipeline-cell">
+        <div class="p-label">뉴스레터 오픈율</div>
+        <div class="p-current">
+          <span class="month-tag">3월호</span>
+          <span class="p-big">48.93<small>%</small></span>
+        </div>
+        <div class="p-sub">
+          <div class="p-sub-row"><span class="key">2월호</span><span class="val">57.71% <span class="trend-down">↓</span></span></div>
+          <div class="p-sub-row"><span class="key">업계 평균</span><span class="val">30~40%</span></div>
+        </div>
+      </div>
+
+      <div class="pipeline-cell">
+        <div class="p-label">세미나 참석자</div>
+        <div class="p-current">
+          <span class="month-tag">3월 SQL</span>
+          <span class="p-big">64<small>명</small></span>
+        </div>
+        <div class="p-sub">
+          <div class="p-sub-row"><span class="key">참석률</span><span class="val">81.0% (79→64)</span></div>
+          <div class="p-sub-row"><span class="key">만족도</span><span class="val">8.64 / 10</span></div>
+        </div>
+      </div>
+
+      <div class="pipeline-cell">
+        <div class="p-label">세미나 후속 요청</div>
+        <div class="p-current">
+          <span class="month-tag">3월 SQL</span>
+          <span class="p-big">28<small>명</small></span>
+        </div>
+        <div class="p-sub">
+          <div class="p-sub-row"><span class="key">비율</span><span class="val">45.9%</span></div>
+          <div class="p-sub-row"><span class="key">NPS</span><span class="val">43.5</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Row 3: Conversion -->
+    <div class="pipeline-row-label">③ Conversion &mdash; 얼마나 전환됐나</div>
+    <div class="pipeline-grid">
+
+      <div class="pipeline-cell">
+        <div class="p-label">제품 도입 문의</div>
+        <div class="p-current">
+          <span class="month-tag">4월</span>
+          <span class="p-big">5<small>건</small></span>
+        </div>
+        <div class="p-sub">
+          <div class="p-sub-row"><span class="key">3월</span><span class="val">9건 <span class="trend-down">↓</span></span></div>
+          <div class="p-sub-row"><span class="key">2026 YTD</span><span class="val">30건</span></div>
+        </div>
+      </div>
+
+      <div class="pipeline-cell">
+        <div class="p-label">사옥 투어 신청</div>
+        <div class="p-current">
+          <span class="month-tag">4월</span>
+          <span class="p-big">2<small>건</small></span>
+        </div>
+        <div class="p-sub">
+          <div class="p-sub-row"><span class="key">3월</span><span class="val">4건 <span class="trend-down">↓</span></span></div>
+          <div class="p-sub-row"><span class="key">2026 YTD</span><span class="val">16건</span></div>
+        </div>
+      </div>
+
+      <div class="pipeline-cell">
+        <div class="p-label">블로그</div>
+        <div class="p-current">
+          <span class="month-tag">4월</span>
+          <span class="p-big">1<small>건</small></span>
+        </div>
+        <div class="p-sub">
+          <div class="p-sub-row"><span class="key">3월</span><span class="val">7건 <span class="trend-down">↓</span></span></div>
+          <div class="p-sub-row"><span class="key">2026 YTD</span><span class="val">17건</span></div>
+        </div>
+      </div>
+
+      <div class="pipeline-cell">
+        <div class="p-label">교육 · 세미나 문의</div>
+        <div class="p-current">
+          <span class="month-tag">4월</span>
+          <span class="p-big">0<small>건</small></span>
+        </div>
+        <div class="p-sub">
+          <div class="p-sub-row"><span class="key">3월</span><span class="val">7건 <span class="trend-down">↓</span></span></div>
+          <div class="p-sub-row"><span class="key">2026 YTD</span><span class="val">9건</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="pipeline-foot">
+      &sdot; 각 칸은 <b>이번 달(크게)</b> &rarr; 전월(중간) &rarr; <b>YTD</b>(Year-to-Date &middot; 2026년 1월부터 누적)/참고(작게) 3층 위계. <span class="trend-down">↓</span>는 전월 대비 감소, <span class="trend-up">↑</span>는 증가.<br>
+      &sdot; Awareness 웹사이트 세션 &middot; 신규 방문자 &middot; 소셜 유입은 4/22 기준 GA4 실데이터. 블로그 CTA는 admin API 스키마상 제출 건수(페이지뷰 아님).<br>
+      &sdot; Engagement 세미나 수치는 2026-03-26 Oracle SQL Tuning 세미나 결과 보고서의 4월 집계 공개 기준. 뉴스레터 오픈율은 4월 미발송(3/31 발송분 지표 유지).<br>
+      &sdot; 2025 연간 참고 — 제품 62 / 투어 69 / 블로그 22 / 교육 세미나 1. 2026-02 아카데미 95건은 이벤트성 급증으로 정기 지표에서 제외.<br>
+      &sdot; 출처 <code>admin.ex-em.com/api/v1/open/stats</code> &middot; <code>notion: (소셜) 뉴스레터 성과</code> &middot; <code>mm-reports/seminar/2026-03-26</code>
+    </div>
+  </div>
+
+  <div class="grid3">
+
+    <!-- 1. 대외 브랜드 자산 -->
+    <div class="col">
+      <div class="col-head">
+        <span class="icon">01</span>
+        <div>
+          <h2>대외 브랜드 자산</h2>
+          <div class="sub">고객 대상 노출 자료</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="t">신한은행 고객성공사례 영상 <span class="badge done">공개</span></div>
+        <div class="d">BGM 저작권 해결 &middot; SEO/AEO 최적화 마무리 후 공식 공개.<br><a href="https://youtu.be/3tk270BGwd4" target="_blank" rel="noopener">&rarr; 영상 보기 (YouTube)</a></div>
+        <div class="m">4월 경영회의 <b>임원진 긍정 피드백 확인</b></div>
+      </div>
+
+      <div class="item">
+        <div class="t">케이뱅크 고객성공사례 촬영 <span class="badge done">완료</span></div>
+        <div class="d">고객사 + 엔지니어 인터뷰 촬영 완료. 편집은 5월 중 완료 예정.</div>
+      </div>
+
+      <div class="item">
+        <div class="t">PostgreSQL Wait Interface 출판 기념 이벤트 <span class="badge done">마무리</span></div>
+        <div class="d">당첨자 선정 &middot; 리드 수집 &middot; 발송 프로세스 체계화 (재사용 템플릿 확보).</div>
+      </div>
+
+      <div class="col-link">↗ <b>Awareness</b> &middot; 블로그 CTA 1건 &middot; SNS 도달 준비중 (2026-05)</div>
+    </div>
+
+    <!-- 2. 영업 지원 -->
+    <div class="col">
+      <div class="col-head">
+        <span class="icon">02</span>
+        <div>
+          <h2>영업 지원</h2>
+          <div class="sub">세일즈 &middot; 제안 자료</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="t">세일즈 툴킷 사전 준비사항 <span class="badge done">제작 완료</span></div>
+        <div class="d">엑셈원 &middot; 인터맥스 &middot; 맥스게이지 DB 지원 종류별(Oracle / MS SQL / MySQL 등) 구성도 디자인 표준화.</div>
+        <div class="m"><b>3개 제품군</b> &middot; 영업본부 전달 예정</div>
+      </div>
+
+      <div class="item">
+        <div class="t">SQL Server × GitHub Copilot Chat 도서 <span class="badge prog">착수</span></div>
+        <div class="d">67개 사례 10장 구조 &middot; 1차 작업본 저자 공유(4/9). 6월 세미나 연계 출간 일정.</div>
+        <div class="m"><b>4월 표지·내지 &rarr; 5월 검수 &rarr; 6월 인쇄</b></div>
+      </div>
+
+      <div class="item">
+        <div class="t">제품 브로슈어 업데이트 <span class="badge prog">기획</span></div>
+        <div class="d">웹용 &middot; 인쇄용 분리 구성 및 통합 브로슈어 인쇄본 기획. 유관부서 피드백 수집 중.</div>
+      </div>
+
+      <div class="col-link">↗ <b>Conversion</b> &middot; 4월 비즈 리드 8건 (3월 27건 <span class="trend-down">↓</span>)</div>
+    </div>
+
+    <!-- 3. 행사·세미나 -->
+    <div class="col">
+      <div class="col-head">
+        <span class="icon">03</span>
+        <div>
+          <h2>행사 &middot; 세미나</h2>
+          <div class="sub">2Q 오프라인 파이프라인</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="t">3월 Oracle SQL Tuning 세미나 결과 보고 <span class="badge done">완료</span></div>
+        <div class="d">세미나 결과 보고 프로세스 표준화 첫 적용. 향후 세미나 재사용 템플릿 확정.</div>
+        <div class="m">참석 <b>64명</b> &middot; 설문 평점 <b>8.64 / 10</b> &middot; 뉴스레터 구독 <b>+47명</b></div>
+      </div>
+
+      <div class="item">
+        <div class="t">AWS Summit Seoul 2026 부스 준비 <span class="badge new">D-28</span></div>
+        <div class="d">부스 기획안 &middot; AIOps 체험 게임 「Alert or Not」 &middot; 리드 스캔 등록 &middot; 경품안 &middot; 유관부서 합의 완료.</div>
+        <div class="m">5/20~21 &middot; 양일 약 <b>800명 참여 예상</b></div>
+      </div>
+
+      <div class="item">
+        <div class="t">6월 MS SQL Server 튜닝 세미나 <span class="badge prog">기획</span></div>
+        <div class="d">세션 구성 협의 완료 &middot; 발표자료 템플릿 정리 착수.</div>
+      </div>
+
+      <div class="col-link">↗ <b>Engagement</b> &middot; 참석 64명 / 만족 8.64 / 후속 요청 28명</div>
+    </div>
+
+  </div>
+
+  <!-- 5월 집중 일정 -->
+  <div class="timeline-box">
+    <div class="tl-title">5월 집중 일정</div>
+
+    <div class="tl-hero">
+      <div class="hero-date">5 / 20 ~ 21</div>
+      <div class="hero-content">
+        <div class="hero-event">AWS Summit Seoul 2026 부스 운영</div>
+        <div class="hero-sub">양일 약 800명 참여 예상 &middot; 엑셈원 AI 체험 부스 &middot; 리드 스캔 운영</div>
+      </div>
+      <div class="hero-badge">핵심 이벤트</div>
+    </div>
+
+    <div class="tl-cats">
+      <div class="tl-cat">
+        <div class="cat-label">디자인 완성</div>
+        <ul>
+          <li><span>AWS Summit PPT · 리플릿</span><span class="when">5월 초</span></li>
+          <li><span>공용 PPT · 블로그 썸네일 템플릿</span><span class="when">5월 말</span></li>
+        </ul>
+      </div>
+      <div class="tl-cat">
+        <div class="cat-label">콘텐츠 · 출판</div>
+        <ul>
+          <li><span>케이뱅크 영상 편집 완료</span><span class="when">5월 중</span></li>
+          <li><span>SQL Server 도서 검수</span><span class="when">5월 중</span></li>
+        </ul>
+      </div>
+      <div class="tl-cat">
+        <div class="cat-label">다음 행사</div>
+        <ul>
+          <li><span>6월 MS SQL Server 세미나 기획 마무리</span><span class="when">5월 말</span></li>
+        </ul>
       </div>
     </div>
-  </section>
-  <section id="sec-conversion">
-    <h2>6. 전환 (문의 · 투어 · 브로슈어)</h2>
-    <p class="section-lead">퍼널의 바닥. 실제 영업 기회로 이어진 지표와 그 직전 단계 신호를 함께 봅니다.</p>
-    <div class="card">
-      <div class="sub-title">전환 이벤트 · 지난달 대비</div>
-      <p class="section-lead" style="margin:-8px 0 12px">문의·투어는 엑셈 어드민 실적 기반이라 가장 정확합니다. 나머지는 GA4 이벤트 기준입니다.</p>
-      <table>
-        <thead><tr><th>지표</th><th class="num">2026년 4월</th><th class="num">2026년 3월</th><th class="num">추세</th></tr></thead>
-        <tbody>
-    <tr><td>제품 문의 <span class="source-tag">Admin</span></td><td class="num">6건</td><td class="num">10건</td><td class="num down">-40.0%</td></tr>
-    <tr><td>사옥 투어 <span class="source-tag">Admin</span></td><td class="num">2건</td><td class="num">4건</td><td class="num down">-50.0%</td></tr>
-    <tr><td>브로슈어 다운로드 <span class="source-tag">GA4</span></td><td class="num">147건</td><td class="num">239건</td><td class="num down">-38.5%</td></tr>
-    <tr><td>뉴스레터 구독 클릭 <span class="source-tag">GA4</span></td><td class="num">14건</td><td class="num">10건</td><td class="num up">+40.0%</td></tr>
-    <tr><td>블로그 CTA 클릭 <span class="source-tag">GA4</span></td><td class="num">15건</td><td class="num">25건</td><td class="num down">-40.0%</td></tr>
-    </tbody>
-      </table>
-    </div>
-    <div class="card">
-      <div class="sub-title">문의·투어 경로 역추적</div>
-      <p class="section-lead" style="margin:-8px 0 12px">각 전환이 어느 채널에서 들어와 어떤 페이지를 거쳐 이뤄졌는지 실제 경로입니다.</p>
-      <table>
-        <thead><tr><th>유형</th><th>유입 채널</th><th>첫 방문 페이지</th><th class="num">건수</th></tr></thead>
-        <tbody>
-        <tr>
-          <td><span class="chip chip-tour_request">사옥 투어</span></td>
-          <td>검색 (Organic)</td>
-          <td><a href="https://ex-em.com/ko" target="_blank">/ko</a></td>
-          <td class="num">6건</td>
-        </tr>
-        <tr>
-          <td><span class="chip chip-inquiry_submit">제품 문의</span></td>
-          <td>검색 (Organic)</td>
-          <td><a href="https://ex-em.com/ko" target="_blank">/ko</a></td>
-          <td class="num">5건</td>
-        </tr>
-        <tr>
-          <td><span class="chip chip-inquiry_submit">제품 문의</span></td>
-          <td>검색 (Organic)</td>
-          <td><a href="https://ex-em.com/ko/service/database" target="_blank">/ko/service/database</a></td>
-          <td class="num">1건</td>
-        </tr>
-        <tr>
-          <td><span class="chip chip-inquiry_submit">제품 문의</span></td>
-          <td>검색 (Organic)</td>
-          <td><a href="https://ex-em.com/ko/service/llmops" target="_blank">/ko/service/llmops</a></td>
-          <td class="num">1건</td>
-        </tr>
-        <tr>
-          <td><span class="chip chip-tour_request">사옥 투어</span></td>
-          <td>검색 (Organic)</td>
-          <td><a href="https://ex-em.com(not set)" target="_blank">(not set)</a></td>
-          <td class="num">1건</td>
-        </tr></tbody>
-      </table>
-    </div>
-    <div class="card">
-      <div class="sub-title">브로슈어 제품별 다운로드</div>
-      <p class="section-lead" style="margin:-8px 0 12px">어느 제품 자료를 가장 많이 받아 갔는지 봅니다. 다음 콘텐츠·광고 우선순위를 정하는 힌트입니다.</p>
-      <table>
-        <tbody>
-        <tr>
-          <td>exemONE</td>
-          <td><div class="mini-bar"><div class="mini-bar-fill" style="width:28.7%"></div></div></td>
-          <td class="num">51건 <span class="muted">(28.7%)</span></td>
-        </tr>
-        <tr>
-          <td>MaxGauge</td>
-          <td><div class="mini-bar"><div class="mini-bar-fill" style="width:19.1%"></div></div></td>
-          <td class="num">34건 <span class="muted">(19.1%)</span></td>
-        </tr>
-        <tr>
-          <td>InterMax</td>
-          <td><div class="mini-bar"><div class="mini-bar-fill" style="width:17.4%"></div></div></td>
-          <td class="num">31건 <span class="muted">(17.4%)</span></td>
-        </tr>
-        <tr>
-          <td>eXemble</td>
-          <td><div class="mini-bar"><div class="mini-bar-fill" style="width:14.6%"></div></div></td>
-          <td class="num">26건 <span class="muted">(14.6%)</span></td>
-        </tr>
-        <tr>
-          <td>XAIOps</td>
-          <td><div class="mini-bar"><div class="mini-bar-fill" style="width:12.4%"></div></div></td>
-          <td class="num">22건 <span class="muted">(12.4%)</span></td>
-        </tr>
-        <tr>
-          <td>EBIGs</td>
-          <td><div class="mini-bar"><div class="mini-bar-fill" style="width:3.9%"></div></div></td>
-          <td class="num">7건 <span class="muted">(3.9%)</span></td>
-        </tr>
-        <tr>
-          <td>Woodpecker</td>
-          <td><div class="mini-bar"><div class="mini-bar-fill" style="width:2.2%"></div></div></td>
-          <td class="num">4건 <span class="muted">(2.2%)</span></td>
-        </tr>
-        <tr>
-          <td>InterMax for Mobile</td>
-          <td><div class="mini-bar"><div class="mini-bar-fill" style="width:1.7%"></div></div></td>
-          <td class="num">3건 <span class="muted">(1.7%)</span></td>
-        </tr></tbody>
-      </table>
-    </div>
-    
-        <div class="card">
-          <div class="sub-title">도서 실습자료 다운로드</div>
-          <p class="section-lead" style="margin:-8px 0 12px">출판 도서의 실습 자료 ZIP. 제품 브로슈어와 별도로 집계합니다.</p>
-          <table><tbody><tr><td><a href="https://ex-em.com/ko/resource/book/fluent-postgresql" target="_blank">막힘없이 PostgreSQL</a></td><td class="num">3건</td></tr><tr><td><a href="https://ex-em.com/ko/resource/book/oracle-performance-troubleshooting-bas" target="_blank">오라클 성능 트러블슈팅의 기초</a></td><td class="num">2건</td></tr><tr><td><a href="https://ex-em.com/ko/resource/book/postgresql-wait-interface" target="_blank">PostgreSQL Wait Interface</a></td><td class="num">2건</td></tr><tr><td><a href="https://ex-em.com/ko/resource/book/sql-server-tuning-guide" target="_blank">SQL SERVER 튜닝 가이드</a></td><td class="num">2건</td></tr><tr><td><a href="https://ex-em.com/ko/resource/book/beginning-sql-tuning-2" target="_blank">beginning-sql-tuning-2</a></td><td class="num">1건</td></tr><tr><td><a href="https://ex-em.com/ko/resource/book/big-data-analysis-with-knime" target="_blank">big-data-analysis-with-knime</a></td><td class="num">1건</td></tr><tr><td><a href="https://ex-em.com/ko/resource/book/python-lib-for-machine-learning" target="_blank">python-lib-for-machine-learning</a></td><td class="num">1건</td></tr></tbody></table>
-        </div>
-  </section>
+  </div>
 
-  <section id="sec-market">
-    <h2>7. 경쟁사·업계 동향</h2>
-    <p class="section-lead">지난달 주목할 포인트 3가지 먼저. 세부 수치는 아래에서 확인하실 수 있습니다.</p>
-    <div class="card">
-      <div class="market-highlights"><div class="mh-row"><span class="mh-tag mh-comp">경쟁사</span><span class="mh-text"><b>Datadog</b>가 69건 발행으로 가장 활발 · 주로 <b>블로그</b> 유형. 전체 284건 중 24% 차지.</span></div><div class="mh-row"><span class="mh-tag mh-industry">업계</span><span class="mh-text"><b>AI/Cloud</b> 이슈가 708건으로 최다. 전체 1042건 중 68% — 이 주제가 업계 주요 관심사.</span></div><div class="mh-row"><span class="mh-tag mh-customer">고객사</span><span class="mh-text">[기타] <a href="https://www.newscj.com/news/articleView.html?idxno=3394603" target="_blank">[이슈in] 신세계, AI 전략 재정비… ‘말하는 AI’에서 ‘일하는 AI 인프라로’</a> — 신세계그룹</span></div></div>
-      <details class="market-detail">
-        <summary>경쟁사 발행 상세 · 업계 카테고리 상세 열기</summary>
-        <div class="context-grid" style="margin-top:12px">
-          <div class="context-block">
-            <div class="context-label">경쟁사 발행 (총 284건)</div>
-            <div class="context-value">Datadog 69건 · Dynatrace 32건 · Elastic 28건 · Splunk 25건 · Grafana Labs 24건 · Honeycomb.io 23건</div>
-            <div class="context-label" style="margin-top:10px">콘텐츠 유형</div>
-            <div class="context-value">블로그 165건 · 제품 소식 88건 · 백서/eBook 18건 · 투자/M&A 10건 · 사례 2건</div>
-          </div>
-          <div class="context-block">
-            <div class="context-label">업계 뉴스 (총 1042건)</div>
-            <div class="context-value">AI/Cloud 708건 · 기타 150건 · 보안 82건 · 인프라 30건 · 공공 21건 · IT운영 14건</div>
-          </div>
-        </div>
-      </details>
-      <div class="sub-title" style="margin-top:18px">고객사 동향 TOP 5</div>
-      <p class="section-lead" style="margin:-8px 0 12px">엑셈 고객사에 대한 지난달 언론 기사입니다. 영업 기회·연락 타이밍 참고용입니다.</p>
-      <ul class="customer-list"><li><span class="chip-cat">기타</span> <a href="https://www.newscj.com/news/articleView.html?idxno=3394603" target="_blank">[이슈in] 신세계, AI 전략 재정비… ‘말하는 AI’에서 ‘일하는 AI 인프라로’</a> — 신세계그룹</li><li><span class="chip-cat">AI도입</span> <a href="https://www.digitaltoday.co.kr/news/articleView.html?idxno=657916" target="_blank">KB국민은행, AI 기반 'KB화상상담서비스' 고도화</a> — KB국민은행</li><li><span class="chip-cat">기타</span> <a href="https://news.dealsitetv.com/articles/167900" target="_blank">케이뱅크, 3대 미래 성장 동력 강화…'플랫폼·SME·AI'</a> — 케이뱅크</li><li><span class="chip-cat">AI도입</span> <a href="https://www.etnews.com/20260416000357" target="_blank">NH농협은행, AI 기반 여신 프로세스 혁신...전담 TF 가동</a> — NH농협은행</li><li><span class="chip-cat">AI도입</span> <a href="https://www.seoulcity.co.kr/news/articleView.html?idxno=534158" target="_blank">서울시-SBA, 게임기업 손잡고 ‘AI 활용 서울 테마 게임’ 찾는다</a> — 서울시청</li></ul>
-    </div>
-  </section>
+  <!-- 관련 자료 -->
+  <div class="links">
+    <div class="links-title">관련 자료</div>
 
-  
-  <section id="sec-bx">
-    <h2>8. BX팀 이달의 활동</h2>
-    <p class="section-lead">이달 BX팀이 진행한 프로젝트와 완료된 작업을 정리했습니다. 숫자 지표와 별개로 팀의 실행 흐름을 한눈에 보는 섹션이에요.</p>
-    <div class="card">
-      <div class="sub-title">활성 프로젝트</div>
-      <table>
-        <thead><tr><th>프로젝트</th><th>상태</th><th>담당자</th></tr></thead>
-        <tbody>
-            <tr>
-              <td>[디자인] 세일즈 툴킷</td>
-              <td><span class="chip-tour_request">진행 중</span></td>
-              <td>탁수정</td>
-            </tr>
-            <tr>
-              <td>[오프라인] AWS Summit Seoul 2026</td>
-              <td><span class="chip-tour_request">진행 중</span></td>
-              <td>임수현, 탁수정</td>
-            </tr>
-            <tr>
-              <td>[오프라인] MS-SQL 세미나</td>
-              <td><span class="chip-tour_request">진행 중</span></td>
-              <td>임수현, 정진아</td>
-            </tr>
-            <tr>
-              <td>[온라인] 고객성공사례</td>
-              <td><span class="chip-tour_request">진행 중</span></td>
-              <td>김유진</td>
-            </tr>
-            <tr>
-              <td>[온라인] 뉴스레터</td>
-              <td><span class="chip-tour_request">진행 중</span></td>
-              <td>김유진</td>
-            </tr>
-            <tr>
-              <td>[온라인] 링크드인, 인스타그램</td>
-              <td><span class="chip-tour_request">진행 중</span></td>
-              <td>임수현</td>
-            </tr>
-            <tr>
-              <td>[온라인] 백서 제작</td>
-              <td><span class="chip-tour_request">진행 중</span></td>
-              <td>이진석, 김유진, 정진아, 탁수정</td>
-            </tr>
-            <tr>
-              <td>[온라인] 블로그</td>
-              <td><span class="chip-tour_request">진행 중</span></td>
-              <td>김유진, 김건</td>
-            </tr>
-            <tr>
-              <td>[온라인] 유튜브</td>
-              <td><span class="chip-tour_request">진행 중</span></td>
-              <td>임수현, 채은빈, 김건</td>
-            </tr>
-            <tr>
-              <td>[출판] SQL Server</td>
-              <td><span class="chip-tour_request">진행 중</span></td>
-              <td>임수현, 정진아</td>
-            </tr>
-            <tr>
-              <td>[행사] 리벨리온 MOU</td>
-              <td><span class="chip-tour_request">진행 중</span></td>
-              <td>이진석, 정진아, 김건, 전현지</td>
-            </tr>
-            <tr>
-              <td>사진 촬영/편집</td>
-              <td><span class="chip-tour_request">진행 중</span></td>
-              <td>전현지</td>
-            </tr>
-            <tr>
-              <td>[타부서] </td>
-              <td><span class="chip-cat">완료</span></td>
-              <td>정진아</td>
-            </tr></tbody>
-      </table>
+    <div class="link-group">
+      <div class="group-label">웹사이트 성과</div>
+      <div class="link-grid">
+        <a href="https://exem-reports.vercel.app/weekly/2026-04-13" target="_blank" rel="noopener">
+          <span>엑셈 웹사이트 주간 리포트 &middot; 4월 3주</span>
+          <span class="arr">&rarr;</span>
+        </a>
+      </div>
     </div>
-    <div class="card">
-      <div class="sub-title">완료 작업 <b>48건</b></div>
-      <p class="section-lead" style="margin:-8px 0 12px">담당자별 이달 완료 작업 건수입니다.</p>
-      <table>
-        <thead><tr><th>담당자</th><th class="num">완료 건수</th></tr></thead>
-        <tbody><tr><td>탁수정</td><td class="num">20건</td></tr><tr><td>임수현</td><td class="num">15건</td></tr><tr><td>김유진</td><td class="num">6건</td></tr><tr><td>정진아</td><td class="num">3건</td></tr><tr><td>미배정</td><td class="num">2건</td></tr><tr><td>김건</td><td class="num">2건</td></tr></tbody>
-      </table>
-    </div>
-  </section>
 
-  <section id="sec-insight">
-    <h2>9. 주요 인사이트와 다음 달 액션</h2>
-    <p class="section-lead">데이터를 엮어 찾은 패턴과 다음 달 실행할 액션을 정리했습니다.</p>
-    <div class="insight"><div class="insight-title">문의 6건의 주요 경로: 검색 (Organic) → /ko</div><div class="insight-body">홈에서 바로 문의로 간 경로입니다. 검색으로 사이트에 들어온 뒤 상단 메뉴나 메인 CTA를 통해 문의 페이지로 이동한 사용자가 많다는 뜻입니다. 홈 상단 배너·문의 버튼 노출을 유지하고, 지난달 상위 검색어(GA4 → 획득 → 트래픽 획득)를 확인해 관련 콘텐츠를 강화할 것을 권장합니다.</div></div><div class="insight"><div class="insight-title">브로슈어 1위: exemONE (51건, 전체 29%)</div><div class="insight-body">exemONE과 MaxGauge(34건)이 지난달 시장 관심의 대부분을 차지했습니다. 다음 달 블로그·LinkedIn 콘텐츠 중 1편을 exemONE 관련 주제로 배정하고, 제품 페이지의 FAQ·고객사례 섹션이 최신 상태인지 확인할 것을 권장합니다.</div></div><div class="insight"><div class="insight-title">AI 인용 유입 45건 (ChatGPT 최다)</div><div class="insight-body">AI 인용은 누적 SEO 자산이므로 4~8주 단위로 추세만 관찰하면 됩니다. 급등·급락이 있을 때만 원인 파악을 권장합니다.</div></div><div class="insight"><div class="insight-title">방문 -36.8%</div><div class="insight-body">약 37% 감소했습니다. 원인 후보는 ①주요 블로그 SEO 순위 변동, ②레퍼러(외부 사이트) 연결 끊김, ③이메일 발송 주기 변화입니다. GA4 탐색 보고서에서 '소스/매체'별 전주 비교를 먼저 확인하고, 상위 3개 검색어의 구글 순위를 Search Console에서 점검해 주시기 바랍니다.</div></div><div class="insight"><div class="insight-title">경쟁사 발행 284건 — Datadog 69건으로 선두</div><div class="insight-body">'블로그' 유형(165건)이 우세합니다. Datadog의 최근 발행 주제를 확인하고, 엑셈 블로그에서 다루지 않은 주제 1개를 2주 내 커버할 것을 권장합니다. 경쟁사 DB에서 해당 글 제목·URL을 바로 확인할 수 있습니다.</div></div><div class="insight"><div class="insight-title">블로그 CTA 클릭 감소 -40.0%</div><div class="insight-body">전주(25건) 대비 하락했습니다. 지난달 발행 블로그 리스트를 뽑아 CTA 버튼 배치·문구·색상이 기존 인기 글과 동일한지 확인하고, 조회수 상위 5개 글에 CTA가 실제로 보이는지 육안 점검을 권장합니다. <strong>단, 하단 '함께 볼 콘텐츠' 영역은 GTM 태그 미적용으로 실제 클릭이 과소 집계될 수 있습니다.</strong></div></div>
-  </section>
+    <div class="link-group">
+      <div class="group-label">행사 &middot; 세미나</div>
+      <div class="link-grid">
+        <a href="https://dlwlstjr.github.io/mm-reports/seminar/2026-03-26-oracle-sql-tuning.html" target="_blank" rel="noopener">
+          <span>3월 Oracle SQL Tuning 세미나 결과 보고</span>
+          <span class="arr">&rarr;</span>
+        </a>
+        <a href="https://aws-summit-plan-deploy.vercel.app/" target="_blank" rel="noopener">
+          <span>AWS Summit 부스 기획안</span>
+          <span class="arr">&rarr;</span>
+        </a>
+        <a href="https://alert-or-not-game.vercel.app" target="_blank" rel="noopener">
+          <span>Alert or Not &middot; AIOps 체험 게임</span>
+          <span class="arr">&rarr;</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="link-group">
+      <div class="group-label">BX팀 리포트</div>
+      <div class="link-grid">
+        <a href="https://dlwlstjr.github.io/mm-reports/meeting/2026-04-13.html" target="_blank" rel="noopener">
+          <span>4월 전사월간경영회의 상세 리포트</span>
+          <span class="arr">&rarr;</span>
+        </a>
+        <a href="https://dlwlstjr.github.io/mm-reports/briefing/2026-04-W2.html" target="_blank" rel="noopener">
+          <span>BX팀 주간 브리핑 &middot; 4월 2주</span>
+          <span class="arr">&rarr;</span>
+        </a>
+        <a href="https://dlwlstjr.github.io/mm-reports/briefing/2026-04-W4.html" target="_blank" rel="noopener">
+          <span>BX팀 주간 브리핑 &middot; 4월 4주</span>
+          <span class="arr">&rarr;</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="link-group">
+      <div class="group-label">타부서 지원 (IR팀)</div>
+      <div class="link-grid">
+        <a href="https://ir-book-reform.vercel.app" target="_blank" rel="noopener">
+          <span>[BX팀] IR Book 개편 제안 V1</span>
+          <span class="arr">&rarr;</span>
+        </a>
+        <a href="https://ir-book-reform.vercel.app/ir-book" target="_blank" rel="noopener">
+          <span>[BX팀] IR Book 개편 제안 V2</span>
+          <span class="arr">&rarr;</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
 
   <footer>
-    <span>엑셈 BX팀 · 매월 1일 자동 생성</span>
-    <a href="https://analytics.google.com">GA4 대시보드</a>
-    <a href="https://ex-em.com">ex-em.com</a>
-    <span style="margin-left:auto">생성 시각: 2026-04-22 13:52</span>
+    BX팀 &middot; 월간 정기 리포트 &middot; 2026.04.22 발행 &middot; 데이터 출처 <code>admin.ex-em.com/api/v1/open/stats</code>
   </footer>
+
 </div>
 
-<nav class="toc-float"><a href="#sec-overview" class="toc-item">1. 개요</a><a href="#sec-entry" class="toc-item">2. 유입</a><a href="#sec-content" class="toc-item">3. 콘텐츠</a><a href="#sec-social" class="toc-item">4. 소셜</a><a href="#sec-cta" class="toc-item">5. CTA</a><a href="#sec-conversion" class="toc-item">6. 전환</a><a href="#sec-market" class="toc-item">7. 경쟁·업계</a><a href="#sec-bx" class="toc-item">8. BX 활동</a><a href="#sec-insight" class="toc-item">9. 인사이트</a><a href="#top" class="toc-item toc-top">↑ 맨 위로</a></nav>
-
-<script>
-(function(){
-  const items = document.querySelectorAll('.toc-float .toc-item');
-  const sections = Array.from(document.querySelectorAll('section[id]'));
-  if (!items.length || !sections.length) return;
-  const byId = {};
-  items.forEach(a => { byId[a.getAttribute('href').slice(1)] = a; });
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        items.forEach(i => i.classList.remove('active'));
-        const a = byId[e.target.id];
-        if (a) a.classList.add('active');
-      }
-    });
-  }, { rootMargin: '-40% 0px -55% 0px' });
-  sections.forEach(s => obs.observe(s));
-})();
-</script>
 </body>
 </html>
