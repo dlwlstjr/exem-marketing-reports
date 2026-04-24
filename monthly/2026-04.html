@@ -135,6 +135,7 @@
   .p-sub-row .val { font-variant-numeric: tabular-nums; font-weight: 600; color: var(--ink-2); }
   .p-sub-row .val .trend-down { color: var(--red); font-weight: 700; margin-left: 2px; }
   .p-sub-row .val .trend-up { color: var(--green); font-weight: 700; margin-left: 2px; }
+  .p-sub-row .val .trend-flat { color: var(--ink-3); font-weight: 600; margin-left: 2px; }
   .pipeline-foot {
     margin-top: 12px; padding-top: 10px;
     border-top: 1px solid var(--line);
@@ -172,6 +173,84 @@
   }
   .col-link b { color: var(--brand-2); font-weight: 700; }
   .col-link .trend-down { color: var(--red); font-weight: 700; }
+
+  /* Funnel overview (월간 퍼널 요약 박스) */
+  .funnel-overview {
+    margin: 6px 0 22px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 18px 22px 16px;
+  }
+  .funnel-overview-title {
+    font: 700 13.5px/1.4 'Pretendard', sans-serif;
+    color: var(--ink);
+  }
+  .funnel-overview-lead {
+    font: 400 11.5px/1.5 'Pretendard', sans-serif;
+    color: var(--ink-3);
+    margin: 4px 0 12px;
+  }
+  .funnel-box {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+    gap: 10px;
+    align-items: center;
+    padding: 14px 4px 6px;
+  }
+  .funnel-stage { text-align: center; }
+  .funnel-stage .funnel-label {
+    font: 600 11px/1.4 'Pretendard', sans-serif;
+    color: var(--ink-3); margin-bottom: 6px;
+  }
+  .funnel-stage .funnel-value {
+    font: 700 22px/1.1 'Pretendard', sans-serif;
+    color: var(--ink);
+  }
+  .funnel-stage .funnel-unit {
+    font: 400 11px/1.4 'Pretendard', sans-serif;
+    color: var(--ink-3); margin-top: 2px;
+  }
+  .funnel-stage .funnel-trend {
+    font: 600 10.5px/1.4 'Pretendard', sans-serif;
+    margin-top: 6px;
+  }
+  .funnel-stage .funnel-trend.down { color: var(--red); }
+  .funnel-stage .funnel-trend.up { color: var(--brand-2); }
+  .funnel-arrow {
+    display: flex; flex-direction: column; align-items: center;
+    font: 400 16px/1 'Pretendard', sans-serif;
+    color: var(--ink-3);
+  }
+  .funnel-arrow .funnel-rate {
+    font: 700 10.5px/1.3 'Pretendard', sans-serif;
+    color: var(--ink-2);
+    background: var(--bg);
+    padding: 2px 8px; border-radius: 10px;
+    margin-top: 4px;
+  }
+  @media (max-width: 900px) {
+    .funnel-box { grid-template-columns: 1fr 1fr; row-gap: 18px; }
+    .funnel-arrow { display: none; }
+  }
+  /* Funnel context badge (월 성격 맥락) */
+  .funnel-context {
+    display: flex; align-items: center; gap: 10px;
+    background: var(--accent-soft);
+    border-left: 3px solid var(--brand);
+    padding: 10px 14px; border-radius: 6px;
+    margin: 4px 0 12px;
+    font: 500 11.5px/1.55 'Pretendard', sans-serif;
+    color: var(--ink-2);
+  }
+  .funnel-context .ctx-tag {
+    background: var(--brand); color: #fff;
+    font: 700 10px/1.4 'Pretendard', sans-serif;
+    padding: 3px 8px; border-radius: 4px;
+    letter-spacing: -0.2px; flex-shrink: 0;
+    white-space: nowrap;
+  }
+  .funnel-context .ctx-body b { color: var(--brand-2); font-weight: 700; }
 
   /* 3-column grid */
   .grid3 {
@@ -342,7 +421,7 @@
       <h1>BX팀 월간 성과 리포트 &middot; 2026년 4월</h1>
     </div>
     <div class="meta">
-      <div><b>발행일</b> 2026.04.22</div>
+      <div><b>발행일</b> 2026.04.24</div>
       <div><b>기간</b> 2026.04.01 ~ 2026.04.30 &middot; 매월 정기 발행</div>
     </div>
   </header>
@@ -362,7 +441,46 @@
   <div class="pipeline">
     <div class="pipeline-head">
       <h3>4월 월간 퍼널 성과</h3>
-      <div class="source">admin.ex-em.com &middot; 뉴스레터 &middot; 세미나 결과보고</div>
+      <div class="source">admin.ex-em.com &middot; GA4 &middot; 뉴스레터 &middot; 세미나 결과보고</div>
+    </div>
+
+    <!-- 퍼널 개요 요약 (4단계 통과율) -->
+    <div class="funnel-overview">
+      <div class="funnel-overview-title">4월 퍼널 개요 (유입 → 전환)</div>
+      <div class="funnel-overview-lead">한눈에 보는 월간 마케팅 퍼널. 각 단계 사이 숫자는 다음 단계로 넘어간 비율(통과율). 통과율이 낮은 구간이 이번 달 개선 포인트입니다.</div>
+      <div class="funnel-context">
+        <span class="ctx-tag">월 성격</span>
+        <span class="ctx-body">3월은 <b>세미나 캠페인월</b> (Oracle SQL Tuning &middot; eDM + 영업 개별 초대로 유입 드라이브) &rarr; 4월은 <b>평월</b> (대형 캠페인 없음) &rarr; 5월은 <b>AWS Summit 캠페인월</b> 예정. 월별 드라이버 유무에 따른 구조적 차이로 해석.</span>
+      </div>
+      <div class="funnel-box">
+        <div class="funnel-stage">
+          <div class="funnel-label">1. 유입</div>
+          <div class="funnel-value">6,075</div>
+          <div class="funnel-unit">세션</div>
+          <div class="funnel-trend down">↓ 8.4% (3월 동기 6,635)</div>
+        </div>
+        <div class="funnel-arrow">→<div class="funnel-rate">56.8%</div></div>
+        <div class="funnel-stage">
+          <div class="funnel-label">2. 콘텐츠 소비</div>
+          <div class="funnel-value">3,451</div>
+          <div class="funnel-unit">조회</div>
+          <div class="funnel-trend down">↓ 16.9% (3월 동기 4,152)</div>
+        </div>
+        <div class="funnel-arrow">→<div class="funnel-rate">5.7%</div></div>
+        <div class="funnel-stage">
+          <div class="funnel-label">3. 관심 행동</div>
+          <div class="funnel-value">197</div>
+          <div class="funnel-unit">건</div>
+          <div class="funnel-trend down">↓ 10.0% (3월 동기 219)</div>
+        </div>
+        <div class="funnel-arrow">→<div class="funnel-rate">4.1%</div></div>
+        <div class="funnel-stage">
+          <div class="funnel-label">4. 전환</div>
+          <div class="funnel-value">8</div>
+          <div class="funnel-unit">건</div>
+          <div class="funnel-trend down">↓ 11.1% (3월 동기 9)</div>
+        </div>
+      </div>
     </div>
 
     <!-- Row 1: Awareness -->
@@ -372,47 +490,47 @@
       <div class="pipeline-cell">
         <div class="p-label">웹사이트 세션</div>
         <div class="p-current">
-          <span class="month-tag">4/1~22</span>
-          <span class="p-big">5,472</span>
+          <span class="month-tag">4/1~24</span>
+          <span class="p-big">6,075</span>
         </div>
         <div class="p-sub">
-          <div class="p-sub-row"><span class="key">3월 동기</span><span class="val">5,960 <span class="trend-down">↓</span></span></div>
-          <div class="p-sub-row"><span class="key">YTD</span><span class="val">30,337</span></div>
+          <div class="p-sub-row"><span class="key">3월 동기</span><span class="val">6,635 <span class="trend-down">↓ 8.4%</span></span></div>
+          <div class="p-sub-row"><span class="key">YTD</span><span class="val">30,899</span></div>
         </div>
       </div>
 
       <div class="pipeline-cell">
         <div class="p-label">신규 방문자</div>
         <div class="p-current">
-          <span class="month-tag">4/1~22</span>
-          <span class="p-big">3,616</span>
+          <span class="month-tag">4/1~24</span>
+          <span class="p-big">3,945</span>
         </div>
         <div class="p-sub">
-          <div class="p-sub-row"><span class="key">3월 동기</span><span class="val">4,003 <span class="trend-down">↓</span></span></div>
-          <div class="p-sub-row"><span class="key">YTD</span><span class="val">21,372</span></div>
+          <div class="p-sub-row"><span class="key">3월 동기</span><span class="val">4,459 <span class="trend-down">↓ 11.5%</span></span></div>
+          <div class="p-sub-row"><span class="key">YTD</span><span class="val">21,701</span></div>
         </div>
       </div>
 
       <div class="pipeline-cell">
         <div class="p-label">블로그 CTA (참조)</div>
         <div class="p-current">
-          <span class="month-tag">4월</span>
-          <span class="p-big">1<small>건</small></span>
+          <span class="month-tag">4/1~24</span>
+          <span class="p-big">2<small>건</small></span>
         </div>
         <div class="p-sub">
-          <div class="p-sub-row"><span class="key">3월</span><span class="val">7건 <span class="trend-down">↓</span></span></div>
-          <div class="p-sub-row"><span class="key">YTD</span><span class="val">17건</span></div>
+          <div class="p-sub-row"><span class="key">3월 동기</span><span class="val">6건 <span class="trend-down">↓ 66.7%</span></span></div>
+          <div class="p-sub-row"><span class="key">YTD</span><span class="val">19건</span></div>
         </div>
       </div>
 
       <div class="pipeline-cell">
         <div class="p-label">소셜 유입</div>
         <div class="p-current">
-          <span class="month-tag">4/1~22</span>
-          <span class="p-big">44</span>
+          <span class="month-tag">4/1~24</span>
+          <span class="p-big">50</span>
         </div>
         <div class="p-sub">
-          <div class="p-sub-row"><span class="key">3월 전체</span><span class="val">125</span></div>
+          <div class="p-sub-row"><span class="key">3월 동기</span><span class="val">99 <span class="trend-down">↓ 49.5%</span></span></div>
           <div class="p-sub-row"><span class="key">채널</span><span class="val">GA4 Social</span></div>
         </div>
       </div>
@@ -426,11 +544,11 @@
       <div class="pipeline-cell">
         <div class="p-label">뉴스레터 구독자</div>
         <div class="p-current">
-          <span class="month-tag">4월</span>
+          <span class="month-tag">4/24</span>
           <span class="p-big">2,832<small>명</small></span>
         </div>
         <div class="p-sub">
-          <div class="p-sub-row"><span class="key">3/31</span><span class="val">2,802명 <span class="trend-up">↑</span></span></div>
+          <div class="p-sub-row"><span class="key">3/31</span><span class="val">2,802명 <span class="trend-up">↑ 1.1%</span></span></div>
           <div class="p-sub-row"><span class="key">순증</span><span class="val">+30명</span></div>
         </div>
       </div>
@@ -442,7 +560,7 @@
           <span class="p-big">48.93<small>%</small></span>
         </div>
         <div class="p-sub">
-          <div class="p-sub-row"><span class="key">2월호</span><span class="val">57.71% <span class="trend-down">↓</span></span></div>
+          <div class="p-sub-row"><span class="key">2월호</span><span class="val">57.71% <span class="trend-down">↓ 8.78%p</span></span></div>
           <div class="p-sub-row"><span class="key">업계 평균</span><span class="val">30~40%</span></div>
         </div>
       </div>
@@ -480,23 +598,23 @@
       <div class="pipeline-cell">
         <div class="p-label">제품 도입 문의</div>
         <div class="p-current">
-          <span class="month-tag">4월</span>
-          <span class="p-big">5<small>건</small></span>
+          <span class="month-tag">4/1~24</span>
+          <span class="p-big">6<small>건</small></span>
         </div>
         <div class="p-sub">
-          <div class="p-sub-row"><span class="key">3월</span><span class="val">9건 <span class="trend-down">↓</span></span></div>
-          <div class="p-sub-row"><span class="key">2026 YTD</span><span class="val">30건</span></div>
+          <div class="p-sub-row"><span class="key">3월 동기</span><span class="val">7건 <span class="trend-down">↓ 14.3%</span></span></div>
+          <div class="p-sub-row"><span class="key">2026 YTD</span><span class="val">32건</span></div>
         </div>
       </div>
 
       <div class="pipeline-cell">
         <div class="p-label">사옥 투어 신청</div>
         <div class="p-current">
-          <span class="month-tag">4월</span>
+          <span class="month-tag">4/1~24</span>
           <span class="p-big">2<small>건</small></span>
         </div>
         <div class="p-sub">
-          <div class="p-sub-row"><span class="key">3월</span><span class="val">4건 <span class="trend-down">↓</span></span></div>
+          <div class="p-sub-row"><span class="key">3월 동기</span><span class="val">2건 <span class="trend-flat">&mdash; 보합</span></span></div>
           <div class="p-sub-row"><span class="key">2026 YTD</span><span class="val">16건</span></div>
         </div>
       </div>
@@ -504,23 +622,23 @@
       <div class="pipeline-cell">
         <div class="p-label">블로그</div>
         <div class="p-current">
-          <span class="month-tag">4월</span>
-          <span class="p-big">1<small>건</small></span>
+          <span class="month-tag">4/1~24</span>
+          <span class="p-big">2<small>건</small></span>
         </div>
         <div class="p-sub">
-          <div class="p-sub-row"><span class="key">3월</span><span class="val">7건 <span class="trend-down">↓</span></span></div>
-          <div class="p-sub-row"><span class="key">2026 YTD</span><span class="val">17건</span></div>
+          <div class="p-sub-row"><span class="key">3월 동기</span><span class="val">6건 <span class="trend-down">↓ 66.7%</span></span></div>
+          <div class="p-sub-row"><span class="key">2026 YTD</span><span class="val">19건</span></div>
         </div>
       </div>
 
       <div class="pipeline-cell">
         <div class="p-label">교육 · 세미나 문의</div>
         <div class="p-current">
-          <span class="month-tag">4월</span>
+          <span class="month-tag">4/1~24</span>
           <span class="p-big">0<small>건</small></span>
         </div>
         <div class="p-sub">
-          <div class="p-sub-row"><span class="key">3월</span><span class="val">7건 <span class="trend-down">↓</span></span></div>
+          <div class="p-sub-row"><span class="key">3월 동기</span><span class="val">3건 <span class="trend-down">↓ 100%</span></span></div>
           <div class="p-sub-row"><span class="key">2026 YTD</span><span class="val">9건</span></div>
         </div>
       </div>
@@ -528,8 +646,9 @@
     </div>
 
     <div class="pipeline-foot">
+      &sdot; 퍼널 개요 정의 — <b>콘텐츠 소비</b>는 블로그 &middot; 제품 &middot; 고객사례 페이지 조회수, <b>관심 행동</b>은 브로슈어 다운로드 &middot; 뉴스레터 구독 클릭 &middot; 블로그 CTA 클릭 합계, <b>전환</b>은 제품 도입 문의 &middot; 사옥 투어 신청 합계.<br>
       &sdot; 각 칸은 <b>이번 달(크게)</b> &rarr; 전월(중간) &rarr; <b>YTD</b>(Year-to-Date &middot; 2026년 1월부터 누적)/참고(작게) 3층 위계. <span class="trend-down">↓</span>는 전월 대비 감소, <span class="trend-up">↑</span>는 증가.<br>
-      &sdot; Awareness 웹사이트 세션 &middot; 신규 방문자 &middot; 소셜 유입은 4/22 기준 GA4 실데이터. 블로그 CTA는 admin API 스키마상 제출 건수(페이지뷰 아님).<br>
+      &sdot; Awareness 웹사이트 세션 &middot; 신규 방문자 &middot; 소셜 유입은 4/24 기준 GA4 실데이터. 블로그 CTA는 admin API 스키마상 제출 건수(페이지뷰 아님).<br>
       &sdot; Engagement 세미나 수치는 2026-03-26 Oracle SQL Tuning 세미나 결과 보고서의 4월 집계 공개 기준. 뉴스레터 오픈율은 4월 미발송(3/31 발송분 지표 유지).<br>
       &sdot; 2025 연간 참고 — 제품 62 / 투어 69 / 블로그 22 / 교육 세미나 1. 2026-02 아카데미 95건은 이벤트성 급증으로 정기 지표에서 제외.<br>
       &sdot; 출처 <code>admin.ex-em.com/api/v1/open/stats</code> &middot; <code>notion: (소셜) 뉴스레터 성과</code> &middot; <code>mm-reports/seminar/2026-03-26</code>
@@ -564,7 +683,7 @@
         <div class="d">당첨자 선정 &middot; 리드 수집 &middot; 발송 프로세스 체계화 (재사용 템플릿 확보).</div>
       </div>
 
-      <div class="col-link">↗ <b>Awareness</b> &middot; 블로그 CTA 1건 &middot; SNS 도달 준비중 (2026-05)</div>
+      <div class="col-link">↗ <b>Awareness</b> &middot; 블로그 CTA 2건 &middot; 소셜 유입 50 (3월 동기 99 <span class="trend-down">↓ 49.5%</span>)</div>
     </div>
 
     <!-- 2. 영업 지원 -->
@@ -594,7 +713,7 @@
         <div class="d">웹용 &middot; 인쇄용 분리 구성 및 통합 브로슈어 인쇄본 기획. 유관부서 피드백 수집 중.</div>
       </div>
 
-      <div class="col-link">↗ <b>Conversion</b> &middot; 4월 비즈 리드 8건 (3월 27건 <span class="trend-down">↓</span>)</div>
+      <div class="col-link">↗ <b>Conversion</b> &middot; 4/1~24 비즈 리드 10건 (3월 동기 18건 <span class="trend-down">↓ 44.4%</span>)</div>
     </div>
 
     <!-- 3. 행사·세미나 -->
@@ -733,7 +852,7 @@
   </div>
 
   <footer>
-    BX팀 &middot; 월간 정기 리포트 &middot; 2026.04.22 발행 &middot; 데이터 출처 <code>admin.ex-em.com/api/v1/open/stats</code>
+    BX팀 &middot; 월간 정기 리포트 &middot; 2026.04.24 발행 &middot; 데이터 출처 <code>admin.ex-em.com/api/v1/open/stats</code>
   </footer>
 
 </div>
