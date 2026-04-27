@@ -111,8 +111,9 @@ section[id]{scroll-margin-top:16px}
 .market-detail > summary::before{content:'▸ ';color:#cbd5e1}
 .market-detail[open] > summary::before{content:'▾ '}
 /* CTA 유형별 분석 */
-.cta-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-@media (max-width: 900px){ .cta-grid{grid-template-columns:1fr} }
+.cta-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media (max-width: 1100px){ .cta-grid{grid-template-columns:repeat(2,1fr)} }
+@media (max-width: 600px){ .cta-grid{grid-template-columns:1fr} }
 .cta-bucket{background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:16px 18px;box-shadow:0 1px 2px rgba(15,23,42,.03)}
 .cta-bucket .bucket-header{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #f1f3f6}
 .cta-bucket .bucket-header h3{font-size:14px;font-weight:700;margin:0;color:#111827}
@@ -192,29 +193,35 @@ footer a:hover{color:#1f4ed8}
         </div></div>
 
   <section id="sec-overview">
-    <h2>1. 퍼널 개요 (유입 → 전환)</h2>
-    <p class="section-lead">한눈에 보는 마케팅 퍼널입니다. 각 단계 사이 숫자는 다음 단계로 넘어간 비율(통과율). 통과율이 낮은 구간이 지난주 개선 포인트입니다.</p>
+    <h2>1. 퍼널 개요 (인지 → 전환)</h2>
+    <p class="section-lead">B2B 마케팅 퍼널 5단계입니다. <b>인지</b>(첫 방문) → <b>관심</b>(콘텐츠 소비) → <b>고려</b>(CTA·구독 클릭) → <b>평가</b>(자료 다운로드 = 사내 검토 중) → <b>전환</b>(문의·투어 제출) 순으로 갈수록 진지한 검토 신호입니다. 단계 사이 숫자는 통과율이며, 낮은 구간이 다음 주 개선 포인트입니다.</p>
     <div class="funnel-wrap">
         <div class="funnel-stage">
-          <div class="funnel-label">1. 유입</div>
+          <div class="funnel-label">1. 인지</div>
           <div class="funnel-value">1,707</div>
           <div class="funnel-unit">세션</div>
           <div class="funnel-trend down">↓ -4.5%</div>
         </div><div class="funnel-arrow">→<div class="funnel-rate">28.3%</div></div>
         <div class="funnel-stage">
-          <div class="funnel-label">2. 콘텐츠 소비</div>
+          <div class="funnel-label">2. 관심</div>
           <div class="funnel-value">483</div>
           <div class="funnel-unit">조회</div>
           <div class="funnel-trend flat">– +0.6%</div>
-        </div><div class="funnel-arrow">→<div class="funnel-rate">13.5%</div></div>
+        </div><div class="funnel-arrow">→<div class="funnel-rate">123.6%</div></div>
         <div class="funnel-stage">
-          <div class="funnel-label">3. 관심 행동</div>
-          <div class="funnel-value">65</div>
+          <div class="funnel-label">3. 고려</div>
+          <div class="funnel-value">597</div>
           <div class="funnel-unit">건</div>
-          <div class="funnel-trend up">↑ +6.6%</div>
-        </div><div class="funnel-arrow">→<div class="funnel-rate">3.1%</div></div>
+          <div class="funnel-trend down">↓ -8.4%</div>
+        </div><div class="funnel-arrow">→<div class="funnel-rate">15.2%</div></div>
         <div class="funnel-stage">
-          <div class="funnel-label">4. 전환</div>
+          <div class="funnel-label">4. 평가</div>
+          <div class="funnel-value">91</div>
+          <div class="funnel-unit">건</div>
+          <div class="funnel-trend down">↓ -24.2%</div>
+        </div><div class="funnel-arrow">→<div class="funnel-rate">2.2%</div></div>
+        <div class="funnel-stage">
+          <div class="funnel-label">5. 전환</div>
           <div class="funnel-value">2</div>
           <div class="funnel-unit">건</div>
           <div class="funnel-trend flat">– 측정 시작 (전주 3)</div>
@@ -222,7 +229,7 @@ footer a:hover{color:#1f4ed8}
   </section>
 
   <section id="sec-entry">
-    <h2>2. 유입 (웹사이트 방문)</h2>
+    <h2>2. 인지 (웹사이트 방문)</h2>
     <p class="section-lead">채널별 방문 수와 전환율을 함께 봅니다. 방문이 많아도 전환으로 이어지지 않으면 그 유입은 품질이 낮은 것입니다.</p>
     <div class="card">
       <table>
@@ -327,7 +334,7 @@ footer a:hover{color:#1f4ed8}
   </section>
 
   <section id="sec-content">
-    <h2>3. 콘텐츠 소비</h2>
+    <h2>3. 관심 (콘텐츠 소비)</h2>
     <p class="section-lead">방문자가 실제로 어떤 콘텐츠를 읽었는지 봅니다. 블로그 조회·랜딩 페이지·CTA 클릭 3가지 관점으로 살핍니다.</p>
     <div class="card">
       <div class="sub-title">블로그 TOP 10</div>
@@ -527,21 +534,30 @@ footer a:hover{color:#1f4ed8}
 
   <section id="sec-cta">
     <h2>5. CTA 유형별 분석</h2>
-    <p class="section-lead">방문자가 누른 실제 행동 버튼을 전환·관심 신호·확산 세 갈래로 나눠 봅니다. 전주 대비 증감으로 최근 흐름을 확인할 수 있어요.</p>
+    <p class="section-lead">방문자가 누른 실제 행동 버튼을 B2B 퍼널 단계별로 봅니다. <b>고려</b>(CTA·구독 클릭) → <b>평가</b>(자료 다운로드) → <b>전환</b>(문의·투어)으로 갈수록 진지한 검토 신호입니다. <b>확산</b>은 외부 채널로 빠진 행동입니다.</p>
     <div class="cta-grid">
       
       <div class="cta-bucket">
         <div class="bucket-header">
           <h3>전환</h3>
-          <div class="bucket-total"><b>95</b>회 <span class="delta-inline"><span class="delta-down">-31 (-25%)</span></span></div>
+          <div class="bucket-total"><b>4</b>회 <span class="delta-inline"><span class="delta-down">-2 (-33%)</span></span></div>
         </div>
         <table class="bucket-table">
-          <tbody><tr><td>파일 다운로드</td><td class="num">54</td></tr><tr><td>브로슈어 다운로드</td><td class="num">37</td></tr><tr><td>문의 제출</td><td class="num">2</td></tr><tr><td>투어 신청</td><td class="num">2</td></tr></tbody>
+          <tbody><tr><td>문의 제출</td><td class="num">2</td></tr><tr><td>투어 신청</td><td class="num">2</td></tr></tbody>
         </table>
       </div>
       <div class="cta-bucket">
         <div class="bucket-header">
-          <h3>관심 신호</h3>
+          <h3>평가</h3>
+          <div class="bucket-total"><b>91</b>회 <span class="delta-inline"><span class="delta-down">-29 (-24%)</span></span></div>
+        </div>
+        <table class="bucket-table">
+          <tbody><tr><td>파일 다운로드</td><td class="num">54</td></tr><tr><td>브로슈어 다운로드</td><td class="num">37</td></tr></tbody>
+        </table>
+      </div>
+      <div class="cta-bucket">
+        <div class="bucket-header">
+          <h3>고려</h3>
           <div class="bucket-total"><b>597</b>회 <span class="delta-inline"><span class="delta-down">-55 (-8%)</span></span></div>
         </div>
         <table class="bucket-table">
@@ -560,8 +576,8 @@ footer a:hover{color:#1f4ed8}
     </div>
   </section>
   <section id="sec-conversion">
-    <h2>6. 전환 (문의 · 투어 · 브로슈어)</h2>
-    <p class="section-lead">퍼널의 바닥. 실제 영업 기회로 이어진 지표와 그 직전 단계 신호를 함께 봅니다.</p>
+    <h2>6. 전환 상세 (문의 · 투어 경로)</h2>
+    <p class="section-lead">퍼널의 마지막 단계인 <b>전환</b> = 문의 제출 + 투어 신청. 실제 영업 기회로 이어진 지표와 그 직전 단계 신호(평가·고려)를 함께 봅니다.</p>
     <div class="card">
       <div class="sub-title">전환 이벤트 · 지난주 대비</div>
       <p class="section-lead" style="margin:-8px 0 12px">문의·투어는 엑셈 어드민 실적 기반이라 가장 정확합니다. 나머지는 GA4 이벤트 기준입니다.</p>
@@ -683,11 +699,11 @@ footer a:hover{color:#1f4ed8}
     <span>엑셈 BX팀 · 매주 월요일 자동 생성</span>
     <a href="https://analytics.google.com">GA4 대시보드</a>
     <a href="https://ex-em.com">ex-em.com</a>
-    <span style="margin-left:auto">생성 시각: 2026-04-28 08:33</span>
+    <span style="margin-left:auto">생성 시각: 2026-04-28 08:55</span>
   </footer>
 </div>
 
-<nav class="toc-float"><a href="#sec-overview" class="toc-item">1. 개요</a><a href="#sec-entry" class="toc-item">2. 유입</a><a href="#sec-content" class="toc-item">3. 콘텐츠</a><a href="#sec-social" class="toc-item">4. 소셜</a><a href="#sec-cta" class="toc-item">5. CTA</a><a href="#sec-conversion" class="toc-item">6. 전환</a><a href="#sec-market" class="toc-item">7. 경쟁·업계</a><a href="#sec-insight" class="toc-item">8. 인사이트</a><a href="#top" class="toc-item toc-top">↑ 맨 위로</a></nav>
+<nav class="toc-float"><a href="#sec-overview" class="toc-item">1. 개요</a><a href="#sec-entry" class="toc-item">2. 인지</a><a href="#sec-content" class="toc-item">3. 관심</a><a href="#sec-social" class="toc-item">4. 소셜</a><a href="#sec-cta" class="toc-item">5. CTA</a><a href="#sec-conversion" class="toc-item">6. 전환</a><a href="#sec-market" class="toc-item">7. 경쟁·업계</a><a href="#sec-insight" class="toc-item">8. 인사이트</a><a href="#top" class="toc-item toc-top">↑ 맨 위로</a></nav>
 
 <script>
 (function(){
