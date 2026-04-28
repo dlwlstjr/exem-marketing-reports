@@ -184,12 +184,12 @@ footer a:hover{color:#1f4ed8}
         <div class="kpi-card">
           <div class="kpi-label">제품 문의</div>
           <div class="kpi-value">2건</div>
-          <div class="kpi-trend flat">– 전주 대비 측정 시작 (전주 2)</div>
+          <div class="kpi-trend flat">– 전주 대비 0건 (전주 2건, 표본 작아 % 비교 어려움)</div>
         </div>
         <div class="kpi-card">
           <div class="kpi-label">사옥 투어</div>
           <div class="kpi-value">0건</div>
-          <div class="kpi-trend flat">– 전주 대비 측정 시작 (전주 1)</div>
+          <div class="kpi-trend flat">– 전주 대비 -1건 (전주 1건, 표본 작아 % 비교 어려움)</div>
         </div>
         <div class="kpi-card">
           <div class="kpi-label">브로슈어 다운로드</div>
@@ -204,7 +204,7 @@ footer a:hover{color:#1f4ed8}
         <div class="kpi-card">
           <div class="kpi-label">블로그 CTA 클릭</div>
           <div class="kpi-value">25건</div>
-          <div class="kpi-trend flat">– 전주 대비 측정 시작 (전주 1)</div>
+          <div class="kpi-trend flat">– 전주 대비 +24건 (전주 1건, 표본 작아 % 비교 어려움)</div>
         </div></div>
 
   <section id="sec-overview">
@@ -239,7 +239,7 @@ footer a:hover{color:#1f4ed8}
           <div class="funnel-label">5. 전환</div>
           <div class="funnel-value">2</div>
           <div class="funnel-unit">건</div>
-          <div class="funnel-trend flat">– 측정 시작 (전주 3)</div>
+          <div class="funnel-trend flat">– -1건 (전주 3건, 표본 작아 % 비교 어려움)</div>
         </div></div>
   </section>
 
@@ -590,30 +590,33 @@ footer a:hover{color:#1f4ed8}
 
   <section id="sec-conversion">
     <h2>6. 전환 (문의 · 투어 제출)</h2>
-    <p class="section-lead">퍼널의 마지막 단계 — 실제 영업 기회로 이어진 액션입니다.</p>
-    <div class="cta-grid cta-grid-single">
-      
-      <div class="cta-bucket">
-        <div class="bucket-header">
-          <h3>전환</h3>
-          <div class="bucket-total"><b>4</b>회 <span class="delta-inline"><span class="delta-down">-2 (-33%)</span></span></div>
-        </div>
-        <table class="bucket-table">
-          <tbody><tr><td>문의 제출</td><td class="num">2</td></tr><tr><td>투어 신청</td><td class="num">2</td></tr></tbody>
-        </table>
+    <p class="section-lead">퍼널의 마지막 단계 — 실제 영업 기회로 이어진 액션입니다. 엑셈 어드민(영업 시스템)에 등록된 실적 기반이라 가장 정확한 숫자예요.</p>
+    <div class="evaluate-summary">
+      <div class="eval-total">
+        <span class="eval-label">전환 합계</span>
+        <span class="eval-value">2<span class="eval-unit">건</span></span>
+        <span class="eval-delta flat">-1건 (전주 3건, 표본 작아 % 비교 어려움)</span>
+      </div>
+      <div class="eval-aux">
+        <span class="eval-aux-label">제품 문의</span>
+        <span class="eval-aux-value">2건 <span class="muted">(전주 2건)</span></span>
+      </div>
+      <div class="eval-aux">
+        <span class="eval-aux-label">사옥 투어</span>
+        <span class="eval-aux-value">0건 <span class="muted">(전주 1건)</span></span>
       </div>
     </div>
     <div class="card">
-      <div class="sub-title">전환 이벤트 · 지난주 대비</div>
-      <p class="section-lead" style="margin:-8px 0 12px">문의·투어는 엑셈 어드민 실적 기반이라 가장 정확합니다. 자료 다운로드는 GA4 평가 단계로 함께 표기합니다.</p>
+      <div class="sub-title">전환 관련 지표 · 지난주 대비</div>
+      <p class="section-lead" style="margin:-8px 0 12px">전환(문의·투어)은 어드민 실적 기반, 그 직전 단계 신호(브로슈어·뉴스레터 클릭·블로그 CTA)는 GA4 이벤트 기반입니다. 출처가 다르면 숫자도 다를 수 있어요.</p>
       <table>
         <thead><tr><th>지표</th><th class="num">2026년 4월 4주</th><th class="num">2026년 4월 3주</th><th class="num">추세</th></tr></thead>
         <tbody>
-    <tr><td>제품 문의 <span class="source-tag">Admin</span></td><td class="num">2건</td><td class="num">2건</td><td class="num flat">측정 시작 (전주 2)</td></tr>
-    <tr><td>사옥 투어 <span class="source-tag">Admin</span></td><td class="num">0건</td><td class="num">1건</td><td class="num flat">측정 시작 (전주 1)</td></tr>
+    <tr><td>제품 문의 <span class="source-tag">Admin</span></td><td class="num">2건</td><td class="num">2건</td><td class="num flat">0건 (전주 2건, 표본 작아 % 비교 어려움)</td></tr>
+    <tr><td>사옥 투어 <span class="source-tag">Admin</span></td><td class="num">0건</td><td class="num">1건</td><td class="num flat">-1건 (전주 1건, 표본 작아 % 비교 어려움)</td></tr>
     <tr><td>브로슈어 다운로드 <span class="source-tag">GA4</span></td><td class="num">37건</td><td class="num">53건</td><td class="num down">-30.2%</td></tr>
     <tr><td>뉴스레터 구독 클릭 <span class="source-tag">GA4</span></td><td class="num">3건</td><td class="num">7건</td><td class="num down">-57.1%</td></tr>
-    <tr><td>블로그 CTA 클릭 <span class="source-tag">GA4</span></td><td class="num">25건</td><td class="num">1건</td><td class="num flat">측정 시작 (전주 1)</td></tr>
+    <tr><td>블로그 CTA 클릭 <span class="source-tag">GA4</span></td><td class="num">25건</td><td class="num">1건</td><td class="num flat">+24건 (전주 1건, 표본 작아 % 비교 어려움)</td></tr>
     </tbody>
       </table>
     </div>
@@ -646,8 +649,8 @@ footer a:hover{color:#1f4ed8}
   </section>
 
   <section id="sec-external">
-    <h2>7. 소셜 채널 · 사이트 밖으로 나간 클릭</h2>
-    <p class="section-lead">사이트 안에서 일어난 외부 채널 관련 행동을 봅니다. <b>소셜</b>은 구독자·팔로워 누적이 본질이며 다음 주 인지 유입을 만드는 자산입니다. <b>사이트 밖으로 나간 클릭</b>은 방문자가 우리 사이트에서 SNS·외부 사이트·채용 페이지 버튼을 눌러 빠져나간 횟수예요. <span class="muted">(외부에서 우리 사이트로 들어오는 인지 유입은 2번 인지 섹션에서 확인하실 수 있습니다)</span></p>
+    <h2>7. 소셜 채널 자산</h2>
+    <p class="section-lead">엑셈뷰 뉴스레터·인스타그램 팔로워 누적입니다. 구독자·팔로워는 다음 주 인지 유입을 만드는 자산이라 단기 변동보다 누적 추세가 본질이에요. <span class="muted">(외부에서 우리 사이트로 들어오는 인지 유입은 2번 인지 섹션에서 확인하실 수 있습니다)</span></p>
     
     <div class="card">
       <div class="social-header">
@@ -683,18 +686,6 @@ footer a:hover{color:#1f4ed8}
               <tr><td>04/01 <span class='muted'>(25일 전)</span></td><td><a href="https://www.instagram.com/p/DWkmIPiE2ay/" target="_blank">서버마다 흩어진 인증, Nginx 하나로 모았습니다. </a> <span class="muted">카루셀</span></td><td class="num">99</td><td class="num">281</td><td class="num">3</td></tr>
               <tr><td>03/09 <span class='muted'>(48일 전)</span></td><td><a href="https://www.instagram.com/p/DVqCkYKE54g/" target="_blank">인프라부터 Kubernetes까지, 영역을 넓힐수록 설계를 보는 시각도 깊어졌습니다.</a> <span class="muted">카루셀</span></td><td class="num">133</td><td class="num">326</td><td class="num">7</td></tr></tbody>
       </table>
-    </div>
-    <div class="cta-grid cta-grid-single" style="margin-top:14px">
-      
-      <div class="cta-bucket">
-        <div class="bucket-header">
-          <h3>사이트 밖으로 나간 클릭</h3>
-          <div class="bucket-total"><b>180</b>회 <span class="delta-inline"><span class="delta-up">+27 (+18%)</span></span></div>
-        </div>
-        <table class="bucket-table">
-          <tbody><tr><td>외부 사이트로 이동</td><td class="num">108</td></tr><tr><td>채용 페이지로 이동</td><td class="num">62</td></tr><tr><td>우리 SNS로 이동</td><td class="num">10</td></tr></tbody>
-        </table>
-      </div>
     </div>
   </section>
 
@@ -734,7 +725,7 @@ footer a:hover{color:#1f4ed8}
     <span>엑셈 BX팀 · 매주 월요일 자동 생성</span>
     <a href="https://analytics.google.com">GA4 대시보드</a>
     <a href="https://ex-em.com">ex-em.com</a>
-    <span style="margin-left:auto">생성 시각: 2026-04-28 11:33</span>
+    <span style="margin-left:auto">생성 시각: 2026-04-28 11:42</span>
   </footer>
 </div>
 
