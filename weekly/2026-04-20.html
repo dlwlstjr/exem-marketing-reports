@@ -115,6 +115,18 @@ section[id]{scroll-margin-top:16px}
 .cta-grid-single{grid-template-columns:1fr;max-width:520px}
 @media (max-width: 1100px){ .cta-grid:not(.cta-grid-single){grid-template-columns:repeat(2,1fr)} }
 @media (max-width: 600px){ .cta-grid{grid-template-columns:1fr} }
+.evaluate-summary{background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:18px 20px;box-shadow:0 1px 2px rgba(15,23,42,.03);margin-bottom:14px}
+.eval-total{display:flex;align-items:baseline;gap:10px;padding-bottom:14px;border-bottom:1px solid #f1f3f6;margin-bottom:12px}
+.eval-label{font-size:13px;color:#6b7280;font-weight:600}
+.eval-value{font-size:32px;font-weight:800;color:#1f4ed8;letter-spacing:-1px;font-family:'Inter','Pretendard Variable',sans-serif}
+.eval-unit{font-size:14px;color:#6b7280;font-weight:500;margin-left:3px}
+.eval-delta{font-size:13px;font-weight:600;margin-left:auto}
+.eval-delta.up{color:#059669}
+.eval-delta.down{color:#dc2626}
+.eval-delta.flat{color:#6b7280}
+.eval-aux{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-size:12.5px;color:#6b7280}
+.eval-aux-label{font-weight:500}
+.eval-aux-value{font-weight:600;color:#374151}
 .cta-bucket{background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:16px 18px;box-shadow:0 1px 2px rgba(15,23,42,.03)}
 .cta-bucket .bucket-header{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #f1f3f6}
 .cta-bucket .bucket-header h3{font-size:14px;font-weight:700;margin:0;color:#111827}
@@ -511,24 +523,17 @@ footer a:hover{color:#1f4ed8}
 
   <section id="sec-evaluate">
     <h2>5. 평가 (자료 다운로드)</h2>
-    <p class="section-lead">자료를 가져갔다는 건 사내 검토가 시작됐다는 뜻입니다. 다음 단계 전환(문의·투어)으로 가는 직전 신호이며, 영업 입장에서 가장 가까운 리드입니다.</p>
-    <p class="section-lead" style="margin:-6px 0 14px;font-size:12.5px;background:#f3f4f6;padding:10px 12px;border-radius:6px;border-left:3px solid #cbd5e1"><b>측정 정의</b> — 평가 단계는 GA4의 <code>file_download</code>(자동 감지) 이벤트 합계입니다. 사이트에서 일어난 실제 파일 다운로드 1회 = 1카운트라 가장 정확한 행동 지표입니다. 별도로 솔루션 페이지의 GTM 커스텀 트래커 <code>brochure_download</code>도 있는데, 이건 file_download와 중복 발생하므로 평가 합계에는 합산하지 않고 아래에 보조 지표로 따로 표시합니다. 분해 (솔루션·도서·기타)는 아래 표 참고.</p>
-    <div class="cta-grid cta-grid-single">
-      
-      <div class="cta-bucket">
-        <div class="bucket-header">
-          <h3>평가</h3>
-          <div class="bucket-total"><b>54</b>회 <span class="delta-inline"><span class="delta-down">-13 (-19%)</span></span></div>
-        </div>
-        <table class="bucket-table">
-          <tbody><tr><td>파일 다운로드 (도서·솔루션·자료 ZIP 등 모든 파일)</td><td class="num">54</td></tr></tbody>
-        </table>
+    <p class="section-lead">자료를 가져갔다는 건 사내 검토가 시작됐다는 뜻입니다. 영업 입장에서 가장 가까운 리드예요. 분해는 솔루션·도서 두 갈래로 봅니다.</p>
+    <div class="evaluate-summary">
+      <div class="eval-total">
+        <span class="eval-label">평가 합계</span>
+        <span class="eval-value">54<span class="eval-unit">건</span></span>
+        <span class="eval-delta down">-19.4%</span>
       </div>
-    </div>
-    <div class="card" style="background:#fafbfc">
-      <div class="sub-title" style="font-size:12.5px;color:#6b7280">보조 지표 — 브로슈어 버튼 클릭 (<code>brochure_download</code>)</div>
-      <p class="section-lead" style="margin:-8px 0 8px;font-size:12px;color:#6b7280">솔루션 페이지에서 "브로슈어 다운로드" 버튼을 누른 횟수. 위 평가 합계에는 포함하지 않습니다(중복 방지).</p>
-      <div style="font-size:18px;font-weight:700;color:#374151">37건 <span style="font-size:12px;color:#9ca3af;font-weight:500">(전주 53건)</span></div>
+      <div class="eval-aux">
+        <span class="eval-aux-label">보조 — 브로슈어 버튼 클릭</span>
+        <span class="eval-aux-value">37건 <span class="muted">(전주 53건)</span></span>
+      </div>
     </div>
     <div class="card">
       <div class="sub-title">솔루션 브로슈어 (제품별)</div>
@@ -714,14 +719,14 @@ footer a:hover{color:#1f4ed8}
   <section id="sec-insight">
     <h2>9. 주요 인사이트와 다음 주 액션</h2>
     <p class="section-lead">데이터를 엮어 찾은 패턴과 다음 주 실행할 액션을 정리했습니다.</p>
-    <div class="insight"><div class="insight-title">이번 주 가장 좁은 구간: 4. 평가 → 5. 전환 (통과율 3.7%)</div><div class="insight-body">이 단계에서 다음 단계로 떨어지는 비율이 가장 큽니다. 이번 주 액션은 이 구간을 끌어올리는 데 집중하는 것을 권장합니다. (분자 2 / 분모 54)</div></div><div class="insight"><div class="insight-title">문의 2건의 주요 경로: 검색 (Organic) → /ko/inquiry</div><div class="insight-body">이 페이지의 역할을 재검토하고, 유사 구조의 인기 페이지 1~2개를 같은 방식으로 최적화할 것을 권장합니다.</div></div><div class="insight"><div class="insight-title">브로슈어 1위: MaxGauge (20건, 전체 41%)</div><div class="insight-body">MaxGauge과 exemONE(14건)이 지난주 시장 관심의 대부분을 차지했습니다. 다음 주 블로그·LinkedIn 콘텐츠 중 1편을 MaxGauge 관련 주제로 배정하고, 제품 페이지의 FAQ·고객사례 섹션이 최신 상태인지 확인할 것을 권장합니다.</div></div><div class="insight"><div class="insight-title">AI 인용 유입 7건 (ChatGPT 최다)</div><div class="insight-body">AI 경유 유입이 -41.7% 감소했습니다. AI가 엑셈을 덜 인용하는 추세일 수 있습니다. 경쟁사가 최근 발행한 블로그를 확인해 우리가 놓친 주제가 있는지, 우리 페이지의 Schema.org 마크업·OG 태그가 정상인지 점검이 필요합니다.</div></div><div class="insight"><div class="insight-title">경쟁사 발행 175건 — Datadog 113건으로 선두</div><div class="insight-body">'블로그' 유형(97건)이 우세합니다. Datadog의 최근 발행 주제를 확인하고, 엑셈 블로그에서 다루지 않은 주제 1개를 2주 내 커버할 것을 권장합니다. 경쟁사 DB에서 해당 글 제목·URL을 바로 확인할 수 있습니다.</div></div>
+    <div class="insight"><div class="insight-title">이번 주 가장 좁은 구간: 4. 평가 → 5. 전환 (통과율 3.7%)</div><div class="insight-body">4. 평가 단계 54건 중 2건만 5. 전환 단계로 넘어갔어요. 다음 단계로 떨어지는 비율이 가장 큰 구간입니다. 이번 주 액션은 이 구간을 끌어올리는 데 집중하는 것을 권장합니다.</div></div><div class="insight"><div class="insight-title">문의 2건의 주요 경로: 검색 (Organic) → /ko/inquiry</div><div class="insight-body">이 페이지의 역할을 재검토하고, 유사 구조의 인기 페이지 1~2개를 같은 방식으로 최적화할 것을 권장합니다.</div></div><div class="insight"><div class="insight-title">브로슈어 1위: MaxGauge (20건, 전체 41%)</div><div class="insight-body">MaxGauge과 exemONE(14건)이 지난주 시장 관심의 대부분을 차지했습니다. 다음 주 블로그·LinkedIn 콘텐츠 중 1편을 MaxGauge 관련 주제로 배정하고, 제품 페이지의 FAQ·고객사례 섹션이 최신 상태인지 확인할 것을 권장합니다.</div></div><div class="insight"><div class="insight-title">AI 인용 유입 7건 (ChatGPT 최다)</div><div class="insight-body">AI 경유 유입이 -41.7% 감소했습니다. AI가 엑셈을 덜 인용하는 추세일 수 있습니다. 경쟁사가 최근 발행한 블로그를 확인해 우리가 놓친 주제가 있는지, 우리 페이지의 Schema.org 마크업·OG 태그가 정상인지 점검이 필요합니다.</div></div><div class="insight"><div class="insight-title">경쟁사 콘텐츠 노출 175건 — Datadog 113건 (발행+보도 합산)</div><div class="insight-body">'블로그' 유형(97건)이 우세합니다. Datadog 관련 콘텐츠 노출이 가장 많았습니다. 자체 블로그 발행과 외부 매체 보도가 합산된 수치라 실제 발행량은 경쟁사 DB에서 '유형' 필터로 분리해 확인하시기 바랍니다. 자체 블로그 글 중 엑셈이 다루지 않은 주제가 있으면 2주 내 1편 커버할 것을 권장합니다.</div></div>
   </section>
 
   <footer>
     <span>엑셈 BX팀 · 매주 월요일 자동 생성</span>
     <a href="https://analytics.google.com">GA4 대시보드</a>
     <a href="https://ex-em.com">ex-em.com</a>
-    <span style="margin-left:auto">생성 시각: 2026-04-28 10:53</span>
+    <span style="margin-left:auto">생성 시각: 2026-04-28 11:00</span>
   </footer>
 </div>
 
